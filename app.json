@@ -1,5 +1,6 @@
 {
     "pages": [
+        
         "pages/index/index",
         "pages/login/login",
         "pages/settings/settings",
@@ -12,7 +13,8 @@
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
         "navigationBarTitleText": "",
-        "navigationBarTextStyle": "black"
+        "navigationBarTextStyle": "black",
+        "navigationStyle": "custom"
     },
     "sitemapLocation": "sitemap.json"
 }

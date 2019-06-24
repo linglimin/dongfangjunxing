@@ -1,5 +1,6 @@
 <!--index.wxml-->
 <view class="container home">
+    <head shouback="true" navbarData="{{navbarData}}"></head>
     <view class="home_img">
          <image src="https://run.mockplus.cn/FmlhvzHH8fivSoCn8GhA/app/0EDCD3EB-42DB-412B-9411-E5DD751EB4BA/D1A558E915764E01841C5EA4468DC2C7.jpg"></image>
     </view>
