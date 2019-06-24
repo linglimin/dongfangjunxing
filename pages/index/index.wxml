@@ -10,6 +10,6 @@
         <view class="home_text_brief">Now，您可以通过手机便捷的查看、处理定单、实时跟踪自己的目标计划……</view>
     </view>
     <view class="home_btn">
-        <button wx:click="go">开始</button>
+        <button bindtap="goMenuPage">开始</button>
     </view>
 </view>

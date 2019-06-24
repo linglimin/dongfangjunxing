@@ -15,7 +15,6 @@
     width: 600rpx;
     font-size: 56rpx; 
     margin: 100rpx auto;
-    color: #fff;
     text-align: center;
 }
 .home_text_brief{

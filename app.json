@@ -1,10 +1,12 @@
 {
     "pages": [
-        
+        "pages/menu/menu",
         "pages/index/index",
+        
         "pages/login/login",
         "pages/settings/settings",
         "pages/targetTracking/targetTracking",
+        "pages/targetTracking/targetSettings",
         "pages/salesAnalysis/salesAnalysis",
         "pages/requestOrder/requestOrder",
         "pages/addList/addList"
