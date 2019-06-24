@@ -1,13 +1,14 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<view class="container home">
+    <view class="home_img">
+         <image src="https://run.mockplus.cn/FmlhvzHH8fivSoCn8GhA/app/0EDCD3EB-42DB-412B-9411-E5DD751EB4BA/D1A558E915764E01841C5EA4468DC2C7.jpg"></image>
+    </view>
+    <view class="home_text">
+        <view>Hi 你好!</view>
+        <view>欢迎使用经营决策平台</view>
+        <view class="home_text_brief">Now，您可以通过手机便捷的查看、处理定单、实时跟踪自己的目标计划……</view>
+    </view>
+    <view class="home_btn">
+        <button wx:click="go">开始</button>
+    </view>
 </view>
