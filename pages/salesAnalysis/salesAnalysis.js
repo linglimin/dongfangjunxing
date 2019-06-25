@@ -64,7 +64,159 @@ Page({
                 profit: '81000',
                 accountProfit: '88700',
                 proportion: '23%'
-            }, {}, {}, {}, {}, {}, {}, {}, {}, {}
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
         ]
     },
 
