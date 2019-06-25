@@ -1,9 +1,10 @@
 /**app.wxss**/
 .container {
-    min-height: 100vh;
+    height: 100vh;
     box-sizing: border-box;
     background: #090738;
     color: #fff;
+    overflow: auto;
 } 
 .main{
     padding: 50rpx 25rpx;
