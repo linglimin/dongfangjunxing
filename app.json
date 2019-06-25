@@ -1,16 +1,15 @@
 {
     "pages": [
-        "pages/salesAnalysis/salesAnalysis",
         "pages/index/index",
         "pages/menu/menu",
-        
         "pages/login/login",
         "pages/settings/settings",
         "pages/targetTracking/targetTracking",
         "pages/targetSettings/targetSettings",
-        
+        "pages/salesAnalysis/salesAnalysis",
         "pages/requestOrder/requestOrder",
-        "pages/addList/addList"
+        "pages/addList/addList",
+        "components/process/circle/circle"
     ],
     "window": {
         "backgroundTextStyle": "light",

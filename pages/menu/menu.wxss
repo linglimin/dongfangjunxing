@@ -1,7 +1,4 @@
 /* pages/menu/menu.wxss */
-.menu{
-    padding: 50rpx 25rpx;
-}
 .menu_img{
     width: 700rpx;
     height: 220rpx;

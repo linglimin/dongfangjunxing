@@ -1,21 +1,23 @@
 <!--pages/menu/menu.wxml-->
-<!--index.wxml-->
 <view class="container menu">
-    <view class="menu_img">
-         <image src="https://run.mockplus.cn/FmlhvzHH8fivSoCn8GhA/app/0EDCD3EB-42DB-412B-9411-E5DD751EB4BA/4EC636D69570505FB1B7746B71FB61B3.jpg"></image>
-    </view>
-    <view class="menu_notification">
-         <text></text>
-         <text>2019-05五一促销活动预热通知</text>
-         <text class='fr'>更多</text>
-    </view>
-    <view class='menu_list'>
-        <view class="menu_info" wx:key="index" wx:for="{{menuList}}">
-            <view class="menu_title">{{item.title}}</view>
-            <view class='menu_sub clearfix'>
-                <view class='fl' wx:key="i" wx:for="{{item.list}}" wx:for-index="i" wx:for-item="list">
-                    <view bindtap="goMenuInfoPage" data-url="{{list.url}}">
-                        <view class='menu_sub_title'>{{list.title}}</view>
+    <head></head>
+    <view class='main'>
+        <view class="menu_img">
+            <image src="https://run.mockplus.cn/FmlhvzHH8fivSoCn8GhA/app/0EDCD3EB-42DB-412B-9411-E5DD751EB4BA/4EC636D69570505FB1B7746B71FB61B3.jpg"></image>
+        </view>
+        <view class="menu_notification">
+            <text></text>
+            <text>2019-05五一促销活动预热通知</text>
+            <text class='fr'>更多</text>
+        </view>
+        <view class='menu_list'>
+            <view class="menu_info" wx:key="index" wx:for="{{menuList}}">
+                <view class="menu_title">{{item.title}}</view>
+                <view class='menu_sub clearfix'>
+                    <view class='fl' wx:key="i" wx:for="{{item.list}}" wx:for-index="i" wx:for-item="list">
+                        <view bindtap="goMenuInfoPage" data-url="{{list.url}}">
+                            <view class='menu_sub_title'>{{list.title}}</view>
+                        </view>
                     </view>
                 </view>
             </view>
