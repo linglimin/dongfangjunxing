@@ -5,7 +5,85 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        targetList: [
+            {
+                title: "2019-05月销售计划",
+                target: "860.00万",
+                complete: "563.18万",
+                percent: "62",
+                type: "circle"
+            },
+            {
+                title: "2019-05月销售计划",
+                target: "860.00万",
+                complete: "563.18万",
+                percent: "62",
+                type: "bar"
+            },
+            {
+                title: "2019-05月销售计划",
+                target: "860.00万",
+                complete: "563.18万",
+                percent: "62",
+                type: "column"
+            },
+            {
+                title: "2019-05月销售计划",
+                target: "860.00万",
+                complete: "563.18万",
+                percent: "62",
+                type: "bar"
+            },
+            {
+                title: "2019-05月销售计划",
+                target: "860.00万",
+                complete: "563.18万",
+                percent: "62",
+                type: "column"
+            },
+            {
+                title: "2019-05月销售计划",
+                target: "860.00万",
+                complete: "563.18万",
+                percent: "62",
+                type: "bar"
+            },
+            {
+                title: "2019-05月销售计划",
+                target: "860.00万",
+                complete: "563.18万",
+                percent: "62",
+                type: "column"
+            },
+            {
+                title: "2019-05月销售计划",
+                target: "860.00万",
+                complete: "563.18万",
+                percent: "62",
+                type: "bar"
+            },
+            {
+                title: "2019-05月销售计划",
+                target: "860.00万",
+                complete: "563.18万",
+                percent: "62",
+                type: "column"
+            },
+            {
+                title: "2019-05月销售计划",
+                target: "860.00万",
+                complete: "563.18万",
+                percent: "62",
+                type: "bar"
+            },
+            {
+                title: "2019-05月销售计划",
+                target: "860.00万",
+                complete: "563.18万",
+                percent: "62",
+                type: "column"
+            }
+        ]
     },
 
     /**
@@ -19,7 +97,6 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
     },
 
     /**

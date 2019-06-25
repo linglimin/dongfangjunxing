@@ -17,7 +17,7 @@ Page({
                     {
                         title: "目标设定",
                         icon: "",
-                        url: "/pages/targetTracking/targetSettings"
+                        url: "/pages/targetSettings/targetSettings"
                     }
                 ]
             },

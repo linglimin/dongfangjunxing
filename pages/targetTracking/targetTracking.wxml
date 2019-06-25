@@ -1,2 +1,26 @@
 <!-- 目标跟踪 pages/targetTracking/targetTracking.wxml-->
-<text>pages/targetTracking/targetTracking.wxml</text>
+<view class="container tracking">
+    <head></head>
+    <view class="main tracking_list">
+        <view class='tracking_info clearfix' wx:key="index" wx:for="{{targetList}}">
+            <view class="fl detail">
+                <view class='title single-text'>{{item.title}}:</view>
+                <view class='clearfix'>
+                    <view class='fl handle'></view>
+                    <view class='fl value_info'>
+                        <view class="value_wrap"><text class='key'>目标:</text> <text class="value single-text">{{item.target}}</text></view>
+                        <view><text class='key'>完成:</text> <text class="value single-text">{{item.complete}}</text></view>
+                    </view>
+                </view>
+            </view>
+            <view class="fl process">
+                <circle wx:if="{{item.type === 'circle'}}" canvasWidth="90" lineWidth="5"></circle>
+                <view wx:if="{{item.type === 'bar'}}">
+                    <view>{{item.percent}} %</view>
+                    <progress percent="10" border-radius="5" stroke-width="8"></progress>
+                </view>
+            </view>
+            <view class="fl status"></view>
+        </view>
+    </view>
+</view>

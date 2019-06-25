@@ -1,1 +1,40 @@
 /* pages/targetTracking/targetTracking.wxss */
+.tracking_info{
+    border: 1px solid #fff;
+    background: rgb(36, 38, 64);
+    padding: 30rpx 20rpx;
+    font-size: 24rpx;
+    margin-bottom: 30rpx;
+}
+.tracking_info .detail{
+    width: 50%;
+}
+.tracking_info .detail .title{
+    margin-bottom: 40rpx; 
+}
+.tracking_info .detail .handle{
+    width: 30%;
+    height: 10rpx;
+}
+.tracking_info .detail .value_info{
+    width: 70%;
+}
+.tracking_info .detail .key{
+    color: rgb(188, 188, 188);
+    margin-right: 20rpx;
+    display: inline-block;
+    overflow: hidden;
+}
+.tracking_info .detail .value{
+    display: inline-block;
+    width: calc(100% - 80rpx);
+}
+.tracking_info .detail .value_wrap {
+    margin-bottom: 20rpx;
+}
+.tracking_info .process{
+    width: 30%;
+}
+.tracking_info .status{
+    width: 20%;
+}
