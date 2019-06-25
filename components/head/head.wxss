@@ -26,30 +26,21 @@
   color: #2c2b2b;
   font-weight: 600;
 }
-
-.nav-capsule {
-  display: flex;
-  align-items: center;
-  margin-left: 30rpx;
-  width: 140rpx;
-  justify-content: space-between;
-  height: 100%;
+.back_page{
+    position: absolute;
+    left: 30rpx;
+    bottom: 0rpx;
 }
-
-.navbar-v-line {
-  width: 1px;
-  height: 32rpx;
-  background-color: #e5e5e5;
+.back_page image{
+    width: 40rpx;
+    height: 36rpx;
 }
-
-.back-pre, .back-home {
-  width: 32rpx;
-   height: 36rpx;
-  margin-top: 4rpx;
-  padding: 10rpx;
+.back_home{
+    position: absolute;
+    left: 90rpx;
+    bottom: 0rpx;
 }
-.nav-capsule .back-home {
-  width: 36rpx;
-  height: 40rpx;
-  margin-top: 3rpx;
+.back_home image{
+    width: 40rpx;
+    height: 40rpx;
 }

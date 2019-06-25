@@ -1,13 +1,12 @@
 <view class='nav-wrap' style='height: {{height*2 + 20}}px;'>
-  <view class='nav-title' style='line-height: {{height*2 + 44}}px;'>{{navbarData.title}}</view>
+  <view class='nav-title' style='line-height: {{height*2 + 44}}px;'>{{title}}</view>
   <view style='display: flex; justify-content: space-around;flex-direction: column'>
-    <view class='nav-capsule' style='height: {{height*2 + 44}}px;' wx:if='{{navbarData.showCapsule}}'>
-      <view bindtap='_navback' wx:if='{{!share}}'>
-        返回
+    <view class='nav-capsule' style='height: {{height*2 + 44}}px;'>
+      <view bindtap='_navback' wx:if='{{showback}}' class='back_page'>
+        <image src='../../assets/images/back.png'></image>
       </view>
-      <view class='navbar-v-line' wx:if='{{!share}}'></view>
-      <view bindtap='_backhome'>
-        
+      <view bindtap='_backhome' class="back_home" wx:if='{{showhome}}'>
+        <image src='../../assets/images/home.png'></image>
       </view>
     </view>
   </view>
