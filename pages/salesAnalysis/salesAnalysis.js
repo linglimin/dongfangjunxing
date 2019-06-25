@@ -5,7 +5,67 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        searchTime: '2018-05',
+        pickerIndex: 1,
+        pickerArray:['门店','大类','品牌','供应商','销售员'],
+        tableList:[
+            {
+                name:'东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            },
+            {
+                name: '东风店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '23%'
+            }, {}, {}, {}, {}, {}, {}, {}, {}, {}
+        ]
     },
 
     /**
@@ -28,7 +88,15 @@ Page({
     onShow: function () {
 
     },
+    bindDateChange: function(){
 
+    },
+    bindPickerChange: function(){
+
+    },
+    search: function(){
+
+    },
     /**
      * 生命周期函数--监听页面隐藏
      */

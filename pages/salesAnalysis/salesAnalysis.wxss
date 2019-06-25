@@ -1,1 +1,72 @@
-/* pages/salesAnalysis/salesAnalysis.wxss */
+.search_form{
+    width: 90%;
+    padding: 0 5%;
+    height: 100rpx;
+    border-bottom: 4rpx solid #ccc;
+}
+.picker_line{
+    width: 30%;
+    height: 100rpx;
+    float: left;
+    margin-right:20rpx;
+    color: #000;
+    background: #090738;
+}
+.picker{
+    width: 80%;
+    padding: 0 10%;
+    height: 60rpx;
+    margin: 20rpx 0;
+    line-height: 60rpx;
+    background: #fff;
+}
+.search{
+    width:140rpx;
+    height: 60rpx;
+    float: right;
+    line-height: 60rpx;
+    margin-right: 0rpx;
+    margin-top:20rpx;
+    text-align: center;
+    background: #eee;
+    border-radius: 10rpx;
+    color: #222;
+}
+.data_table{
+    width: 90%;
+    margin:20rpx 5% 0;
+}
+.data_table .table_head{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:center;
+    background: #eee;
+    color: #222;
+}
+.data_table .table_head view{
+    width: 16.5%;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    font-size: 24rpx;
+}
+.data_table .tabble_body,.data_table .tabble_bottom{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    background: #fff;
+}
+.data_table .tabble_body view,.data_table .tabble_bottom view{
+    width: 16.5%;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    font-size: 24rpx;
+    color: #222;
+}
+.data_table .table_head .br,.data_table .tabble_body .br, .data_table .tabble_bottom .br{
+    border-right: 1px solid #ddd;
+}
+.tabble_bottom{
+    border-top:1px solid #ddd;
+}

@@ -5,6 +5,7 @@ Component({
             type: Object,
             value: {},
             observer: function (newVal, oldVal) {
+                if (!newVal) return
                 this.setData({
                     showback: newVal.showback === false ? false : true,
                     showhome: newVal.showhome === false ? false : true,

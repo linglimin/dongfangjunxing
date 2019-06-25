@@ -1,2 +1,43 @@
 <!-- 销售分析 pages/salesAnalysis/salesAnalysis.wxml-->
-<text>pages/salesAnalysis/salesAnalysis.wxml</text>
+<view class="container sales_analysis">
+    <head navbarData="{{navbarData}}"></head>
+    <view class="search_form">
+        <picker mode="date" class="picker_line" value="{{searchTime}}" fields="month" start="2018-05" end="2020-09" bindchange="bindDateChange">
+            <view class="picker">
+            {{searchTime}}
+            </view>
+        </picker>
+        <picker bindchange="bindPickerChange" class="picker_line" value="{{pickerIndex}}" range="{{pickerArray}}">
+            <view class="picker">
+            {{pickerArray[pickerIndex]}}
+            </view>
+        </picker>
+        <view bindtap='search' class='search'>筛选</view>
+    </view>
+    <view class="data_table">
+        <view class='table_head'>
+            <view class="br">门店</view>
+            <view class="br">销售额</view>
+            <view class="br">销量</view>
+            <view class="br">毛利</view>
+            <view class="br">账后毛利</view>
+            <view>比重</view>
+        </view>
+        <view class='tabble_body' wx:for="{{tableList}}">
+            <view class="br">{{item.name}}</view>
+            <view class="br">{{item.salesMoney}}</view>
+            <view class="br">{{item.salesVolume}}</view>
+            <view class="br">{{item.profit}}</view>
+            <view class="br">{{item.accountProfit}}</view>
+            <view>{{item.proportion}}</view>
+        </view>
+        <view class='tabble_bottom'>
+            <view class="br">合计</view>
+            <view class="br">109283</view>
+            <view class="br">32342</view>
+            <view class="br">3453453</view>
+            <view class="br">234243</view>
+            <view>100%</view>
+        </view>
+    </view>
+</view>

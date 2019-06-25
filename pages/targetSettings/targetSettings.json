@@ -1,4 +1,5 @@
 {
-    "component": true,
-    "usingComponents": {}
+    "usingComponents": {
+        "head": "/components/head/head"
+    }
 }
