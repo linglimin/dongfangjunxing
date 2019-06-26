@@ -15,207 +15,143 @@ Page({
                 salesVolume: '9212',
                 profit: '81000',
                 accountProfit: '88700',
-                proportion: '23%'
+                proportion: '11%'
+            },
+            {
+                name: '南向店',
+                salesMoney: '90090',
+                salesVolume: '8212',
+                profit: '78000',
+                accountProfit: '88700',
+                proportion: '9%'
+            },
+            {
+                name: '太平店',
+                salesMoney: '40090',
+                salesVolume: '4212',
+                profit: '61000',
+                accountProfit: '58700',
+                proportion: '6%'
+            },
+            {
+                name: '长安街店',
+                salesMoney: '101990',
+                salesVolume: '3212',
+                profit: '31000',
+                accountProfit: '48700',
+                proportion: '13%'
+            },
+            {
+                name: '三元桥店',
+                salesMoney: '198090',
+                salesVolume: '9912',
+                profit: '76000',
+                accountProfit: '78700',
+                proportion: '8%'
+            },
+            {
+                name: '望京店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '4%'
+            },
+            {
+                name: '太平店',
+                salesMoney: '40090',
+                salesVolume: '4212',
+                profit: '61000',
+                accountProfit: '58700',
+                proportion: '2%'
+            },
+            {
+                name: '长安街店',
+                salesMoney: '101990',
+                salesVolume: '3212',
+                profit: '31000',
+                accountProfit: '48700',
+                proportion: '3%'
+            },
+            {
+                name: '三元桥店',
+                salesMoney: '198090',
+                salesVolume: '9912',
+                profit: '76000',
+                accountProfit: '78700',
+                proportion: '3%'
+            },
+            {
+                name: '望京店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81000',
+                accountProfit: '88700',
+                proportion: '9%'
+            },
+            {
+                name: '太平店',
+                salesMoney: '40090',
+                salesVolume: '4212',
+                profit: '61000',
+                accountProfit: '58700',
+                proportion: '8%'
+            },
+            {
+                name: '长安街店',
+                salesMoney: '101990',
+                salesVolume: '3212',
+                profit: '31000',
+                accountProfit: '48700',
+                proportion: '9%'
+            },
+            {
+                name: '三元桥店',
+                salesMoney: '198090',
+                salesVolume: '9912',
+                profit: '76000',
+                accountProfit: '78700',
+                proportion: '4%'
+            },
+            {
+                name: '望京店',
+                salesMoney: '100090',
+                salesVolume: '9212',
+                profit: '81900',
+                accountProfit: '82700',
+                proportion: '3%'
             },
             {
                 name: '东风店',
                 salesMoney: '100090',
                 salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
+                profit: '91000',
+                accountProfit: '80700',
+                proportion: '6%'
             },
             {
-                name: '东风店',
+                name: '十里堡店',
                 salesMoney: '100090',
                 salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
+                profit: '81900',
+                accountProfit: '81100',
+                proportion: '2%'
             },
             {
-                name: '东风店',
+                name: '麦子店店',
                 salesMoney: '100090',
                 salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
+                profit: '81900',
+                accountProfit: '89700',
+                proportion: '3%'
             },
             {
-                name: '东风店',
+                name: '六里桥店',
                 salesMoney: '100090',
                 salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
-            },
-            {
-                name: '东风店',
-                salesMoney: '100090',
-                salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
-            },
-            {
-                name: '东风店',
-                salesMoney: '100090',
-                salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
-            },
-            {
-                name: '东风店',
-                salesMoney: '100090',
-                salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
-            },
-            {
-                name: '东风店',
-                salesMoney: '100090',
-                salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
-            },
-            {
-                name: '东风店',
-                salesMoney: '100090',
-                salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
-            },
-            {
-                name: '东风店',
-                salesMoney: '100090',
-                salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
-            },
-            {
-                name: '东风店',
-                salesMoney: '100090',
-                salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
-            },
-            {
-                name: '东风店',
-                salesMoney: '100090',
-                salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
-            },
-            {
-                name: '东风店',
-                salesMoney: '100090',
-                salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
-            },
-            {
-                name: '东风店',
-                salesMoney: '100090',
-                salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
-            },
-            {
-                name: '东风店',
-                salesMoney: '100090',
-                salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
-            },
-            {
-                name: '东风店',
-                salesMoney: '100090',
-                salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
-            },
-            {
-                name: '东风店',
-                salesMoney: '100090',
-                salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
-            },
-            {
-                name: '东风店',
-                salesMoney: '100090',
-                salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
-            },
-            {
-                name: '东风店',
-                salesMoney: '100090',
-                salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
-            },
-            {
-                name: '东风店',
-                salesMoney: '100090',
-                salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
-            },
-            {
-                name: '东风店',
-                salesMoney: '100090',
-                salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
-            },
-            {
-                name: '东风店',
-                salesMoney: '100090',
-                salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
-            },
-            {
-                name: '东风店',
-                salesMoney: '100090',
-                salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
-            },
-            {
-                name: '东风店',
-                salesMoney: '100090',
-                salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
-            },
-            {
-                name: '东风店',
-                salesMoney: '100090',
-                salesVolume: '9212',
-                profit: '81000',
-                accountProfit: '88700',
-                proportion: '23%'
+                profit: '68000',
+                accountProfit: '97700',
+                proportion: '9%'
             },
         ]
     },
@@ -240,11 +176,17 @@ Page({
     onShow: function () {
 
     },
-    bindDateChange: function(){
-
+    bindDateChange: function(e){
+        let time = e.detail.value
+        this.setData({
+            searchTime: time
+        })
     },
-    bindPickerChange: function(){
-
+    bindPickerChange: function(e){
+        let i = e.detail.value
+        this.setData({
+            pickerIndex: i
+        })
     },
     search: function(){
 

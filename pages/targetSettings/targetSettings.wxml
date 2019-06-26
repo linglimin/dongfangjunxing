@@ -1,22 +1,22 @@
 <!--目标设定 pages/targetSettings/targetSettings.wxml-->
 <view class="container target_settings">
     <head navbarData="{{navbarData}}"></head>
-    <view class="bar">
+    <view class="bar mt20">
         <view class="left_text">目标模版:</view>
-        <picker bindchange="bindPickerChange" class="picker_line" value="{{pickerIndex}}" range="{{pickerArray}}">
+        <picker bindchange="bindPickerChange1" class="picker_line" value="{{pickerIndex1}}" range="{{pickerArray1}}">
             <view class="picker">
-            {{pickerArray[pickerIndex]}}
+            {{pickerArray1[pickerIndex1]}}
             </view>
         </picker>
     </view>
     <view class='text'>公司级目标，销售额，不含优惠，新店，空调</view>
     <view class="bar mb6">
-        <picker bindchange="bindPickerChange" class="picker_left" value="{{pickerIndex2}}" range="{{pickerArray}}">
+        <picker bindchange="bindPickerChange2" class="picker_left" value="{{pickerIndex2}}" range="{{pickerArray2}}">
             <view class="picker">
             {{pickerArray2[pickerIndex2]}}
             </view>
         </picker>
-        <picker mode="date" class="picker_right" value="{{searchTime}}" fields="month" start="2018-05" end="2020-09" bindchange="bindDateChange">
+        <picker mode="date" class="picker_right" value="{{searchTime}}" fields="month" start="2018-05" end="2020-09" bindchange="bindDateChange1">
             <view class="picker">
             {{searchTime}}
             </view>
@@ -24,7 +24,7 @@
     </view>
     <view class='bar bb'>
         <view class="left_text">开始日期:</view>
-        <picker mode="date" class="picker_right" value="{{searchTime}}" fields="month" start="2018-05-01" end="2099-09-09" bindchange="bindDateChange">
+        <picker mode="date" class="picker_right" value="{{startTime}}" fields="day" start="2018-05-01" end="2099-09-09" bindchange="bindDateChange2">
             <view class="picker">
             {{startTime}}
             </view>
@@ -32,7 +32,7 @@
     </view>
     <view class='bar mb20'>
         <view class="left_text">结束日期:</view>
-        <picker mode="date" class="picker_right" value="{{searchTime}}" fields="month" start="2018-05-01" end="2099-09-09" bindchange="bindDateChange">
+        <picker mode="date" class="picker_right" value="{{endTime}}" fields="day" start="2018-05-01" end="2099-09-09" bindchange="bindDateChange3">
             <view class="picker">
             {{endTime}}
             </view>
@@ -40,19 +40,11 @@
     </view>
     <view class='bar bb'>
         <view class="left_text">目标名称:</view>
-        <picker mode="date" class="picker_right" value="{{searchTime}}" fields="month" start="2018-05-01" end="2099-09-09" bindchange="bindDateChange">
-            <view class="picker">
-            {{startTime}}
-            </view>
-        </picker>
+        <input placeholder='请输入名称' class='target_input'></input>
     </view>
     <view class='bar mb20'>
         <view class="left_text">目标设定:</view>
-        <picker mode="date" class="picker_right" value="{{searchTime}}" fields="month" start="2018-05-01" end="2099-09-09" bindchange="bindDateChange">
-            <view class="picker">
-            {{endTime}}
-            </view>
-        </picker>
+        <input placeholder='请输入设定目标金额' class='target_input'></input>
     </view>
     <view class='remarks mb20'>
         <view class='remarks_title'>备注：</view>
@@ -60,9 +52,10 @@
     </view>
     <view class='add_pic'>
         <view class='add_pic_title'>图片：</view>
-        <view bindtap="chooseimage" class='choose_image'>
-            <image src='../../assets/images/pro-warn.png'></image>
+        <view bindtap="chooseimage" class='choose_image' wx:if="{{!tempFilePaths}}">
+            <image src='../../assets/images/add.png'></image>
         </view>
+        <image wx:if="{{tempFilePaths}}" src='{{tempFilePaths}}'></image>
     </view>
     <view class='bar'>
         <view class='submit_btn'>提交</view>

@@ -3,10 +3,9 @@
   position: fixed;
   width: 100%;
   top: 0;
-  background: #fff;
   color: #000;
   z-index: 9999999;
-  background: #fff;
+  background-color: #fff;
   height: 100rpx;
 }
 /* 标题要居中 */

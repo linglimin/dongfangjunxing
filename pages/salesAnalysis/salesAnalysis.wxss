@@ -41,11 +41,11 @@
 }
 .data_table{
     width: 92%;
-    margin:20rpx 4% 170rpx 4%;
+    margin:30rpx 4% 220rpx 4%;
     border-top:1px solid #eee;
     border-left:1px solid #eee;
     border-right: 1px solid #eee;
-    background: #090738;
+    background: rgba(42, 37, 90, 0.7);
 }
 .data_table .table_head{
     display: flex;
@@ -53,6 +53,7 @@
     justify-content:center;
     color: #fff;
     border-bottom: 1px solid #eee;
+    font-weight: bold;
 }
 .data_table .table_head view{
     width: 16.5%;
