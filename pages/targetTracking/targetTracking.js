@@ -17,14 +17,14 @@ Page({
                 title: "2019-05月销售计划",
                 target: "860.00万",
                 complete: "563.18万",
-                percent: "62",
+                percent: "89",
                 type: "bar"
             },
             {
                 title: "2019-05月销售计划",
                 target: "860.00万",
                 complete: "563.18万",
-                percent: "62",
+                percent: "55",
                 type: "column"
             },
             {

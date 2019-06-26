@@ -1,5 +1,6 @@
 /* pages/targetTracking/targetTracking.wxss */
 .tracking_info{
+    position: relative;
     border: 1px solid #fff;
     background: rgb(36, 38, 64);
     padding: 30rpx 20rpx;
@@ -35,6 +36,19 @@
 .tracking_info .process{
     width: 30%;
 }
+.tracking_info .process_percent{
+    padding-top: 80rpx; 
+    text-align: right;
+    font-size: 52rpx;
+}
 .tracking_info .status{
-    width: 20%;
+    width: 10%;
+}
+.tracking_info .status_icon{
+    margin-top: 30rpx;
+    font-size: 64rpx;
+}
+.tracking_info .status_detail{
+    position: absolute;
+    bottom: 40rpx;
 }

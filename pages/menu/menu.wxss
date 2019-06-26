@@ -32,3 +32,6 @@
 .menu_sub_title{
     font-size: 24rpx;
 }
+.menu_icon{
+    font-size: 96rpx;
+}

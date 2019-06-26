@@ -16,6 +16,7 @@
                 <view class='menu_sub clearfix'>
                     <view class='fl' wx:key="i" wx:for="{{item.list}}" wx:for-index="i" wx:for-item="list">
                         <view bindtap="goMenuInfoPage" data-url="{{list.url}}">
+                            <view class="menu_icon iconfont {{list.icon}}"></view>
                             <view class='menu_sub_title'>{{list.title}}</view>
                         </view>
                     </view>

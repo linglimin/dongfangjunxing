@@ -2,6 +2,8 @@
     "pages": [
         "pages/index/index",
         "pages/menu/menu",
+       
+       
         "pages/login/login",
         "pages/settings/settings",
         "pages/targetTracking/targetTracking",
