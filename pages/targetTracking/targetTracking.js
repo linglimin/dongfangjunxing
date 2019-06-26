@@ -25,7 +25,7 @@ Page({
                 target: "860.00万",
                 complete: "563.18万",
                 percent: "55",
-                type: "column"
+                type: "circle"
             },
             {
                 title: "2019-05月销售计划",
@@ -39,7 +39,7 @@ Page({
                 target: "860.00万",
                 complete: "563.18万",
                 percent: "62",
-                type: "column"
+                type: "circle"
             },
             {
                 title: "2019-05月销售计划",
@@ -53,7 +53,7 @@ Page({
                 target: "860.00万",
                 complete: "563.18万",
                 percent: "62",
-                type: "column"
+                type: "circle"
             },
             {
                 title: "2019-05月销售计划",
@@ -67,7 +67,7 @@ Page({
                 target: "860.00万",
                 complete: "563.18万",
                 percent: "62",
-                type: "column"
+                type: "circle"
             },
             {
                 title: "2019-05月销售计划",
@@ -81,7 +81,7 @@ Page({
                 target: "860.00万",
                 complete: "563.18万",
                 percent: "62",
-                type: "column"
+                type: "circle"
             }
         ]
     },

@@ -2,6 +2,19 @@
 <view class="container tracking">
     <head></head>
     <view class="main tracking_list">
+        <view class='tracking_header'>
+            <view class="header_tab">
+                <text>进行中</text>
+                <text>历史目标</text>
+            </view>
+             <view class="header_search">
+                <text>筛选</text>
+            </view>
+            <view class="header_btn fr">
+                <view class="iconfont icon-Stone-add-circle"></view>
+            </view>
+        </view>
+        <view class='tracking_location'></view>
         <view class='tracking_info clearfix' wx:key="index" wx:for="{{targetList}}">
             <view class="fl detail">
                 <view class='title single-text'>{{item.title}}:</view>
@@ -16,17 +29,17 @@
                     </view>
                 </view>
             </view>
-            <view class="fl process">
-                <circle wx:if="{{item.type === 'circle'}}" canvasWidth="90" lineWidth="5" value="{{item.percent}}"></circle>
+            <view class="fl process clearfix">
+                <circle class="fr" wx:if="{{item.type === 'circle'}}" canvasWidth="100" lineWidth="6" value="{{item.percent}}"></circle>
                 <view wx:if="{{item.type === 'bar'}}">
                     <view class="process_percent">{{item.percent}} %</view>
-                    <progress percent="{{item.percent}}" border-radius="5" stroke-width="8"></progress>
+                    <progress backgroundColor="#507cb6" activeColor="#f7cffc" percent="{{item.percent}}" border-radius="5" stroke-width="8"></progress>
                 </view>
             </view>
             <view class="fr status">
-                <view wx:if="{{item.percent > 80}}" class='status_icon iconfont icon-Stone-thumbs-up'></view>
-                <view wx:if="{{item.percent > 60 && item.percent <= 80}}" class='status_icon iconfont icon-smile'></view>
-                <view wx:if="{{item.percent <= 60}}" class='status_icon iconfont icon-Stone-alert'></view>
+                <view wx:if="{{item.percent > 80}}" class='great status_icon iconfont icon-Stone-thumbs-up'></view>
+                <view wx:if="{{item.percent > 60 && item.percent <= 80}}" class='great status_icon iconfont icon-smile'></view>
+                <view wx:if="{{item.percent <= 60}}" class='bad status_icon iconfont icon-exclamation-point'></view>
                 <view class='status_detail'>详情</view>
             </view>
         </view>

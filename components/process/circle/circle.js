@@ -18,10 +18,10 @@ Component({
             type: Number,
             value: 10
         },
-        //线条颜色 默认"#393"
+        //线条颜色 默认"#f7cffc"
         lineColor: {
             type: String,
-            value: "#393"
+            value: "#f7cffc"
         },
         //标题 默认“完成率”
         title: {
@@ -33,10 +33,10 @@ Component({
             type: Number,
             value: 45
         },
-        //值的颜色 默认"#ff9c07"
+        //值的颜色 默认"#fff"
         valueColor: {
             type: String,
-            value: "#ff9c07"
+            value: "#fff"
         },
         //最大值 默认100
         maxValue: {
@@ -88,7 +88,7 @@ Component({
             //灰色圆弧
             ctx.beginPath();
             ctx.setLineCap('round');
-            ctx.setStrokeStyle("#ebebeb");
+            ctx.setStrokeStyle("#507cb6");
             ctx.setLineWidth(lineWidth);
             ctx.arc(0, 0, circle_r - lineWidth, 0, 2 * Math.PI, true);
             ctx.stroke();

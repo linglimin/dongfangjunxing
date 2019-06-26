@@ -1,7 +1,47 @@
 /* pages/targetTracking/targetTracking.wxss */
+.tracking_list{
+    padding-top: 0;
+}
+.tracking_location{
+    height: 150rpx;
+}
+.tracking_header{
+    position: fixed;
+    height: 150rpx;
+    padding-top: 50rpx; 
+    margin-bottom: 40rpx;
+    width: calc(100% - 40rpx);
+    box-sizing: border-box;
+    z-index: 2;
+    background: #090738;
+}
+.tracking_header > view{
+    display: inline-block;
+}
+.header_tab{
+    width: 60%;
+    margin-left: 30rpx; 
+    border-bottom: 1px solid #666;
+    padding-bottom: 10rpx; 
+}
+.header_tab text{
+    padding: 0 40rpx;
+}
+.header_tab text:nth-child(1){
+    border-right: 1px solid #666; 
+}
+.header_search{
+    padding-left: 60rpx;
+    font-size: 24rpx; 
+}
+.header_btn .icon-Stone-add-circle{
+    font-size: 80rpx;
+    color: #6781dc;
+
+}
 .tracking_info{
     position: relative;
-    border: 1px solid #fff;
+    border: 1px solid #666;
     background: rgb(36, 38, 64);
     padding: 30rpx 20rpx;
     font-size: 24rpx;
@@ -35,6 +75,7 @@
     margin-bottom: 20rpx;
 }
 .tracking_info .process{
+    position: relative;
     width: 30%;
 }
 .tracking_info .process_percent{
@@ -47,9 +88,15 @@
 }
 .tracking_info .status_icon{
     margin-top: 30rpx;
-    font-size: 64rpx;
+    font-size: 58rpx;
 }
 .tracking_info .status_detail{
     position: absolute;
     bottom: 40rpx;
+}
+.tracking_info .great{
+    color: #f1a0f9
+}
+.tracking_info .bad{
+    color: #eb3223
 }

@@ -1,0 +1,16 @@
+<!--components/process/circle2/circle2.wxml-->
+<view class="progressbar">
+
+        <view class="left-container">
+
+            <view class="left-circle"></view>
+
+        </view>
+
+        <view class="right-container">
+
+            <view class="right-circle"></view>
+
+        </view>
+
+    </view>

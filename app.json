@@ -1,17 +1,17 @@
 {
     "pages": [
+        "pages/targetTracking/targetTracking",
         "pages/index/index",
         "pages/menu/menu",
-       
-       
         "pages/login/login",
         "pages/settings/settings",
-        "pages/targetTracking/targetTracking",
+        
         "pages/targetSettings/targetSettings",
         "pages/salesAnalysis/salesAnalysis",
         "pages/requestOrder/requestOrder",
         "pages/addList/addList",
-        "components/process/circle/circle"
+        "components/process/circle/circle",
+        "components/process/circle2/circle2"
     ],
     "window": {
         "backgroundTextStyle": "light",
