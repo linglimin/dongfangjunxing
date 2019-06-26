@@ -6,7 +6,10 @@
             <view class="fl detail">
                 <view class='title single-text'>{{item.title}}:</view>
                 <view class='clearfix'>
-                    <view class='fl handle'></view>
+                    <view class='fl handle'>
+                        <text style="margin-right: 10rpx;" class="iconfont icon-edit"></text>
+                        <text class="iconfont icon-delete"></text>
+                    </view>
                     <view class='fl value_info'>
                         <view class="value_wrap"><text class='key'>目标:</text> <text class="value single-text">{{item.target}}</text></view>
                         <view><text class='key'>完成:</text> <text class="value single-text">{{item.complete}}</text></view>

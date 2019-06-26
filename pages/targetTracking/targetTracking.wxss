@@ -16,6 +16,7 @@
 .tracking_info .detail .handle{
     width: 30%;
     height: 10rpx;
+    margin-top: 60rpx;
 }
 .tracking_info .detail .value_info{
     width: 70%;

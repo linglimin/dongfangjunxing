@@ -31,7 +31,7 @@ Page({
                     },
                     {
                         title: "透视",
-                        icon: "icon-smile",
+                        icon: "icon-eye_protection",
                         url: ""
                     },
                     {
