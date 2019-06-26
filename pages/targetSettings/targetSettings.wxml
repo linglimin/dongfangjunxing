@@ -1,8 +1,71 @@
 <!--目标设定 pages/targetSettings/targetSettings.wxml-->
-<view class="container sales_analysis">
+<view class="container target_settings">
     <head navbarData="{{navbarData}}"></head>
-    <view class="search_form">
-        
+    <view class="bar">
+        <view class="left_text">目标模版:</view>
+        <picker bindchange="bindPickerChange" class="picker_line" value="{{pickerIndex}}" range="{{pickerArray}}">
+            <view class="picker">
+            {{pickerArray[pickerIndex]}}
+            </view>
+        </picker>
+    </view>
+    <view class='text'>公司级目标，销售额，不含优惠，新店，空调</view>
+    <view class="bar mb6">
+        <picker bindchange="bindPickerChange" class="picker_left" value="{{pickerIndex2}}" range="{{pickerArray}}">
+            <view class="picker">
+            {{pickerArray2[pickerIndex2]}}
+            </view>
+        </picker>
+        <picker mode="date" class="picker_right" value="{{searchTime}}" fields="month" start="2018-05" end="2020-09" bindchange="bindDateChange">
+            <view class="picker">
+            {{searchTime}}
+            </view>
+        </picker>
+    </view>
+    <view class='bar bb'>
+        <view class="left_text">开始日期:</view>
+        <picker mode="date" class="picker_right" value="{{searchTime}}" fields="month" start="2018-05-01" end="2099-09-09" bindchange="bindDateChange">
+            <view class="picker">
+            {{startTime}}
+            </view>
+        </picker>
+    </view>
+    <view class='bar mb20'>
+        <view class="left_text">结束日期:</view>
+        <picker mode="date" class="picker_right" value="{{searchTime}}" fields="month" start="2018-05-01" end="2099-09-09" bindchange="bindDateChange">
+            <view class="picker">
+            {{endTime}}
+            </view>
+        </picker>
+    </view>
+    <view class='bar bb'>
+        <view class="left_text">目标名称:</view>
+        <picker mode="date" class="picker_right" value="{{searchTime}}" fields="month" start="2018-05-01" end="2099-09-09" bindchange="bindDateChange">
+            <view class="picker">
+            {{startTime}}
+            </view>
+        </picker>
+    </view>
+    <view class='bar mb20'>
+        <view class="left_text">目标设定:</view>
+        <picker mode="date" class="picker_right" value="{{searchTime}}" fields="month" start="2018-05-01" end="2099-09-09" bindchange="bindDateChange">
+            <view class="picker">
+            {{endTime}}
+            </view>
+        </picker>
+    </view>
+    <view class='remarks mb20'>
+        <view class='remarks_title'>备注：</view>
+        <textarea placeholder='可输入此目标的备注说明'></textarea>
+    </view>
+    <view class='add_pic'>
+        <view class='add_pic_title'>图片：</view>
+        <view bindtap="chooseimage" class='choose_image'>
+            <image src='../../assets/images/pro-warn.png'></image>
+        </view>
+    </view>
+    <view class='bar'>
+        <view class='submit_btn'>提交</view>
     </view>
 </view>
 
