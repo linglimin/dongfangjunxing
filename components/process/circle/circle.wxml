@@ -1,9 +1,12 @@
-<!--components/process/circle/circle.wxml-->
-<canvas style="width:{{canvasWidth}}px;height:{{canvasWidth}}px;" canvas-id="circleBar">
-  <cover-view class="circle-bar-wrap" style="height:{{canvasWidth}}px;">
-    <cover-view class="val" style="color: {{valueColor}};">
-      {{value}} {{suffix}}
-    </cover-view>
-  </cover-view>
-</canvas>
-<slot></slot>
+<!--components/process/circle3/circle3.wxml-->
+<!--components/process/circle2/circle2.wxml-->
+<view class="circle_process_wrapper" style='width: {{diameter}}rpx;height: {{diameter}}rpx;'>
+    <view class="wrapper right">
+        <view style='border: {{lineWidth}}rpx solid {{bottomLineColor}};border-top-color: {{lineColor}};border-right-color: {{lineColor}}; transform: rotate({{rightDeg}}deg)' class="circle_process rightcircle"></view>
+    </view>
+    <view class="wrapper left">
+        <view style='border: {{lineWidth}}rpx solid {{bottomLineColor}};border-bottom-color: {{lineColor}};border-left-color: {{lineColor}};  transform: rotate({{leftDeg}}deg)' class="circle_process leftcircle"></view>
+    </view>
+    <view style="font-size: {{fontSize}}rpx" class="circle_percent">{{value}}{{suffix}}</view>
+</view>
+

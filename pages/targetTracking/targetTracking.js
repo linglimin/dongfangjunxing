@@ -5,20 +5,26 @@ Page({
      * 页面的初始数据
      */
     data: {
+        active: '1',
+        navbarData: { title: '目标跟踪' },
         targetList: [
             {
                 title: "2019-05月销售计划",
                 target: "860.00万",
                 complete: "563.18万",
-                percent: "62",
-                type: "circle"
+                percent: "130",
+                type: "segment",
+                isReceive: true,
+                hasReceive: false
             },
             {
                 title: "2019-05月销售计划",
                 target: "860.00万",
                 complete: "563.18万",
                 percent: "89",
-                type: "bar"
+                type: "bar",
+                isReceive: true,
+                hasReceive: true
             },
             {
                 title: "2019-05月销售计划",
@@ -139,5 +145,15 @@ Page({
      */
     onShareAppMessage: function () {
 
+    },
+    goTrackingSettings: function(){
+        wx.navigateTo({
+            url: '/pages/targetSettings/targetSettings',
+        })
+    },
+    tab: function(e){
+        this.setData({
+            active: e.currentTarget.dataset.id
+        })
     }
 })

@@ -1,24 +1,40 @@
-/* components/process/circle/circle.wxss */
-.circle-bar-wrap{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  box-sizing: border-box;
-  padding: 0 20%;
+/* components/process/circle3/circle3.wxss */
+.circle_process_wrapper{
+    margin: 0px auto;
+    position: relative;
 }
-.circle-bar-wrap .font{
-  max-height: 62rpx;
-  font-size: 26rpx;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  display:-webkit-box;
-  -webkit-box-orient:vertical;
-  -webkit-line-clamp:2;
-  white-space: normal;
+
+.wrapper{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top:0;
+    overflow: hidden;
 }
-.circle-bar-wrap .val{
-  font-size: 40rpx;
+.right{
+    right:0;
+}
+.left{
+    left:0;
+}
+.circle_process{
+    width:200%;
+    height:100%;
+    box-sizing: border-box;
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+    -webkit-transform: rotate(-135deg); /* -135deg - 45deg */
+}
+.rightcircle{
+    right:0;
+}
+.leftcircle{
+    left:0;
+}
+.circle_percent{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
 }

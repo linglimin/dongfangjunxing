@@ -1,32 +1,27 @@
-// components/process/circle/circle.js
-var windWidth = wx.getSystemInfoSync().windowWidth;
+// components/process/circle3/circle3.js
 Component({
-    options: {
-        multipleSlots: true // 在组件定义时的选项中启用多slot支持
-    },
     /**
      * 组件的属性列表
      */
     properties: {
-        //画布的宽度 默认占屏幕宽度的0.4倍
-        canvasWidth: {
+        diameter: {
             type: Number,
-            value: windWidth * 0.4
+            value: 180
         },
         //线条宽度 默认10
         lineWidth: {
             type: Number,
-            value: 10
+            value: 12
+        },
+        //线条底色 默认"#f7cffc"
+        bottomLineColor: {
+            type: String,
+            value: "#507cb6"
         },
         //线条颜色 默认"#f7cffc"
         lineColor: {
             type: String,
             value: "#f7cffc"
-        },
-        //标题 默认“完成率”
-        title: {
-            type: String,
-            value: "完成率"
         },
         //当前的值 默认45
         value: {
@@ -37,6 +32,10 @@ Component({
         valueColor: {
             type: String,
             value: "#fff"
+        },
+        fontSize: {
+            type: Number,
+            value: 40
         },
         //最大值 默认100
         maxValue: {
@@ -64,46 +63,25 @@ Component({
      * 组件的初始数据
      */
     data: {
-        canvasWidth: windWidth * 0.4,
-        isMarginTop: true
+        leftDeg: -135,
+        rightDeg: -135
     },
 
     /**
      * 组件的方法列表
      */
     methods: {
-        showCanvasRing() {
-            //作画
-            var ctx = wx.createCanvasContext("circleBar", this); //canvas组建封装，需要后加个this
-            var circle_r = this.data.canvasWidth / 2; //画布的一半，用来找中心点和半径
-            var startDegree = this.data.startDegree; //从什么角度开始
-            var maxValue = this.data.maxValue; //最大值
-            var minValue = this.data.minValue; //最小值
-            var value = this.data.value; //当前的值
-            var lineColor = this.data.lineColor; //线条颜色
-            var lineWidth = this.data.lineWidth; //线条宽度
-            var percent = 360 * ((value - minValue) / (maxValue - minValue)); //计算结果
-            //定义起始点
-            ctx.translate(circle_r, circle_r);
-            //灰色圆弧
-            ctx.beginPath();
-            ctx.setLineCap('round');
-            ctx.setStrokeStyle("#507cb6");
-            ctx.setLineWidth(lineWidth);
-            ctx.arc(0, 0, circle_r - lineWidth, 0, 2 * Math.PI, true);
-            ctx.stroke();
-            ctx.closePath();
-            //有色彩的圆弧
-            ctx.beginPath();
-            ctx.setStrokeStyle(lineColor);
-            ctx.setLineWidth(lineWidth);
-            ctx.arc(0, 0, circle_r - lineWidth, startDegree * Math.PI / 180 - 0.5 * Math.PI, percent * Math.PI / 180 + startDegree * Math.PI / 180 - 0.5 * Math.PI, false);
-            ctx.stroke();
-            ctx.closePath();
-            ctx.draw();
-        }
+
     },
     attached: function(){
-        this.showCanvasRing();
+        var leftDeg = 0;
+        var rightDeg = 0;
+        var deg = 3.6 * this.data.value - 135;
+        rightDeg = deg <= 45 ? deg : 45;
+        leftDeg = deg <= 45 ? -135 : -135 + deg - 45;
+        this.setData({
+            leftDeg: leftDeg,
+            rightDeg: rightDeg
+        })
     }
 })

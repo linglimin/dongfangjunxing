@@ -1,0 +1,62 @@
+/* components/process/segment/segment.wxss */
+.segment {
+    width: 50%;
+    height: calc(100% - 10px);
+    top: 5px;
+    left: 50%;
+    border-left: 1px solid #6f9af8;
+    position: relative; 
+}
+.segment text{
+    position: absolute;
+    color: #6f9af8;
+}
+.segment text:nth-child(1){
+    width: 10px;
+    border-top: 1px solid #6f9af8;
+    top: 0;
+}
+.segment text:nth-child(2){
+    width: 10px;
+    border-top: 1px solid #6f9af8;
+    top: 50%;
+}
+.segment text:nth-child(3){
+    width: 10px;
+    border-top: 1px solid #6f9af8;
+    top: 100%;
+}
+.segment text:nth-child(4){
+    left: 14px;
+    top: -0;
+    transform: translate(0, -50%);
+}
+.segment text:nth-child(5){
+    left: 14px;
+    top: 50%;
+    transform: translate(0, -50%)
+}
+.segment text:nth-child(6){
+    left: 14px;
+    top: 100%;
+    transform: translate(0, -50%)
+}
+.segment text:nth-child(7){
+    color: #fff;
+    font-size: 28rpx;
+    right: calc(100% + 10px);
+}
+.segment text:nth-child(8){
+    padding: 5px 6px;
+    height: 0;
+    background: #fff;
+    right: calc(100% - 5px);
+}
+.segment text:nth-child(8)::after{
+    content: "";
+    border: 5px solid transparent;
+    border-left-color: #fff; 
+    position: absolute;
+    top: 0;
+    left: 100%;
+}

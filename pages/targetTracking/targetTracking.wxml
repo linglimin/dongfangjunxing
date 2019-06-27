@@ -1,17 +1,17 @@
 <!-- 目标跟踪 pages/targetTracking/targetTracking.wxml-->
 <view class="container tracking">
-    <head></head>
+    <head navbarData="{{navbarData}}"></head>
     <view class="main tracking_list">
         <view class='tracking_header'>
             <view class="header_tab">
-                <text>进行中</text>
-                <text>历史目标</text>
+                <text data-id="1" class="{{active === '1' ? 'active' : ''}}"  bindtap="tab">进行中</text>
+                <text data-id="2" class="{{active === '2' ? 'active' : ''}}"  bindtap="tab">历史目标</text>
             </view>
              <view class="header_search">
                 <text>筛选</text>
             </view>
             <view class="header_btn fr">
-                <view class="iconfont icon-Stone-add-circle"></view>
+                <view bindtap="goTrackingSettings" class="iconfont icon-Stone-add-circle"></view>
             </view>
         </view>
         <view class='tracking_location'></view>
@@ -20,8 +20,9 @@
                 <view class='title single-text'>{{item.title}}:</view>
                 <view class='clearfix'>
                     <view class='fl handle'>
-                        <text style="margin-right: 10rpx;" class="iconfont icon-edit"></text>
-                        <text class="iconfont icon-delete"></text>
+                        <text wx:if="{{item.isReceive}}" class="handle_receive {{item.hasReceive ? 'has_receive' : ''}}">接收</text>
+                        <text wx:if="{{!item.isReceive}}" style="margin-right: 10rpx;" class="iconfont icon-edit" bindtap='goTrackingSettings'></text>
+                        <text wx:if="{{!item.isReceive}}" class="iconfont icon-delete"></text>
                     </view>
                     <view class='fl value_info'>
                         <view class="value_wrap"><text class='key'>目标:</text> <text class="value single-text">{{item.target}}</text></view>
@@ -30,9 +31,10 @@
                 </view>
             </view>
             <view class="fl process clearfix">
-                <circle class="fr" wx:if="{{item.type === 'circle'}}" canvasWidth="100" lineWidth="6" value="{{item.percent}}"></circle>
+                <segment class="fr" wx:if="{{item.type === 'segment'}}" value="{{item.percent}}"></segment>
+                <circle class="fr" wx:if="{{item.type === 'circle'}}" value="{{item.percent}}"></circle>
                 <view wx:if="{{item.type === 'bar'}}">
-                    <view class="process_percent">{{item.percent}} %</view>
+                    <view class="process_percent">{{item.percent}}%</view>
                     <progress backgroundColor="#507cb6" activeColor="#f7cffc" percent="{{item.percent}}" border-radius="5" stroke-width="8"></progress>
                 </view>
             </view>

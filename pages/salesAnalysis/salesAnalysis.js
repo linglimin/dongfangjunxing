@@ -5,6 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+        navbarData: { title: '销售分析' },
         searchTime: '2018-05',
         pickerIndex: 1,
         pickerArray:['门店','大类','品牌','供应商','销售员'],

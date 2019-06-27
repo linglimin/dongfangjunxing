@@ -1,0 +1,13 @@
+<!--components/process/segment/segment.wxml-->
+<view style='width: 120px; height: {{height}}rpx;'>
+    <view class='segment'>
+        <text></text>
+        <text></text>
+        <text></text>
+        <text>200%</text>
+        <text>100%</text>
+        <text>0%</text>
+        <text style='top: calc(100% - {{value / 2}}%); transform: translate(0, -50%)'>{{value}}%</text>
+        <text style='top: calc(100% - {{value / 2}}%); transform: translate(0, -50%)'></text>
+    </view>
+</view>

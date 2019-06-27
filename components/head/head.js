@@ -34,7 +34,7 @@ Component({
         //返回到首页
         _backhome() {
             wx.reLaunch({
-                url: '/pages/index/index'
+                url: '/pages/menu/menu'
             })
         }
     }

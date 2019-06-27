@@ -1,6 +1,7 @@
 {
     "usingComponents": {
         "head": "/components/head/head",
-        "circle": "/components/process/circle/circle"
+        "circle": "/components/process/circle/circle",
+        "segment": "/components/process/segment/segment"
     }
 }
