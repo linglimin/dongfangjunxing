@@ -6,7 +6,10 @@
             <view class="fl detail">
                 <view class='title single-text'>{{item.title}}:</view>
                 <view class='clearfix'>
-                    <view class='fl handle'></view>
+                    <view class='fl handle'>
+                        <text style="margin-right: 10rpx;" class="iconfont icon-edit"></text>
+                        <text class="iconfont icon-delete"></text>
+                    </view>
                     <view class='fl value_info'>
                         <view class="value_wrap"><text class='key'>目标:</text> <text class="value single-text">{{item.target}}</text></view>
                         <view><text class='key'>完成:</text> <text class="value single-text">{{item.complete}}</text></view>
@@ -14,13 +17,18 @@
                 </view>
             </view>
             <view class="fl process">
-                <circle wx:if="{{item.type === 'circle'}}" canvasWidth="90" lineWidth="5"></circle>
+                <circle wx:if="{{item.type === 'circle'}}" canvasWidth="90" lineWidth="5" value="{{item.percent}}"></circle>
                 <view wx:if="{{item.type === 'bar'}}">
-                    <view>{{item.percent}} %</view>
-                    <progress percent="10" border-radius="5" stroke-width="8"></progress>
+                    <view class="process_percent">{{item.percent}} %</view>
+                    <progress percent="{{item.percent}}" border-radius="5" stroke-width="8"></progress>
                 </view>
             </view>
-            <view class="fl status"></view>
+            <view class="fr status">
+                <view wx:if="{{item.percent > 80}}" class='status_icon iconfont icon-Stone-thumbs-up'></view>
+                <view wx:if="{{item.percent > 60 && item.percent <= 80}}" class='status_icon iconfont icon-smile'></view>
+                <view wx:if="{{item.percent <= 60}}" class='status_icon iconfont icon-Stone-alert'></view>
+                <view class='status_detail'>详情</view>
+            </view>
         </view>
     </view>
 </view>

@@ -11,12 +11,12 @@ Page({
                 list: [
                     {
                         title: "目标跟踪",
-                        icon: "",
+                        icon: "icon-configuration",
                         url: "/pages/targetTracking/targetTracking"
                     },
                     {
                         title: "目标设定",
-                        icon: "",
+                        icon: "icon-Stone-settings",
                         url: "/pages/targetSettings/targetSettings"
                     }
                 ]
@@ -26,17 +26,17 @@ Page({
                 list: [
                     {
                         title: "销售分析",
-                        icon: "",
+                        icon: "icon-bar",
                         url: "/pages/salesAnalysis/salesAnalysis"
                     },
                     {
                         title: "透视",
-                        icon: "",
+                        icon: "icon-eye_protection",
                         url: ""
                     },
                     {
                         title: "走势",
-                        icon: "",
+                        icon: "icon-data",
                         url: ""
                     }
                 ]
@@ -46,17 +46,17 @@ Page({
                 list: [
                     {
                         title: "个人中心",
-                        icon: "",
+                        icon: "icon-Stone-person",
                         url: ""
                     },
                     {
                         title: "任务清单",
-                        icon: "",
+                        icon: "icon-Stone-clipboard",
                         url: ""
                     },
                     {
                         title: "预警中心",
-                        icon: "",
+                        icon: "icon-Stone-alert",
                         url: ""
                     }
                 ]
