@@ -1,45 +1,110 @@
 <!-- 销售分析 pages/salesAnalysis/salesAnalysis.wxml-->
 <view class="container sales_analysis">
     <head navbarData="{{navbarData}}"></head>
-    <view class="data_table">
-        <view class='table_head'>
-            <view class="br">门店</view>
-            <view class="br">销售额</view>
-            <view class="br">销量</view>
-            <view class="br">毛利</view>
-            <view class="br">账后毛利</view>
-            <view>比重</view>
-        </view>
-        <view class='table_body' wx:for="{{tableList}}">
-            <view class="tr">
-                <view class="br">{{item.name}}</view>
-                <view class="br">{{item.salesMoney}}</view>
-                <view class="br">{{item.salesVolume}}</view>
-                <view class="br">{{item.profit}}</view>
-                <view class="br">{{item.accountProfit}}</view>
-                <view>{{item.proportion}}</view>
+    <view class='page_view'>
+        <view class="search_form" style='margin-top: {{height*2 + 20}}px;'>
+            <picker mode="date" class="picker_line" value="{{searchTime}}" fields="month" start="2018-05" end="2020-09" bindchange="bindDateChange">
+                <view class="picker">
+                {{searchTime}}
+                </view>
+            </picker>
+            <!-- <picker bindchange="bindPickerChange" class="picker_line" value="{{pickerIndex}}" range="{{pickerArray}}">
+                <view class="picker">
+                {{pickerArray[pickerIndex]}}
+                </view>
+            </picker> -->
+            <view bindtap='showScreen' class='search'>筛选</view>
+            <view class='sort'>
+                <picker bindchange="bindPickerChange1" class="picker_line1" value="{{pickerIndex}}" range="{{pickerArray}}">
+                    <view class="picker1">
+                    {{pickerArray[pickerIndex1]}}
+                    </view>
+                </picker>
+                <picker bindchange="bindPickerChange2" class="picker_line2" value="{{pickerIndex}}" range="{{pickerArray}}">
+                    <view class="picker2">
+                    {{pickerArray[pickerIndex2]}}
+                    </view>
+                </picker>
+                <view class='show_sort' bindtap='showSort'>显示</view>
+            </view>
+            <view class="sort_layer" wx:if="{{isShowSort}}">
+                <view class='sort_line'>
+                    <view class='td'>列名</view>
+                    <view class='td'>是否显示</view>
+                    <view class='td'>顺序</view>
+                </view>
+                <view wx:for="{{sorts}}" class='sort_line'>
+                    <view class='td'>{{item.name}}</view>
+                    <view class='td'>
+                        <checkbox value="{{item.chose}}" checked="{{item.chose==1}}"/>
+                    </view>
+                    <view class='td'>
+                        <image src='../../assets/images/up.png'></image>
+                        <image src='../../assets/images/down.png'></image>
+                    </view>
+                </view>
             </view>
         </view>
-        <view class='table_bottom'>
-            <view class="br">合计</view>
-            <view class="br">8009283</view>
-            <view class="br">301242</view>
-            <view class="br">34053673</view>
-            <view class="br">2304243</view>
-            <view>100%</view>
+        <view class='screen_layer' wx:if="{{isShowScreen}}">
+            <view>
+                <view class='chose_title'>门店范围:</view>
+                <view class='chose_list'>
+                    <view wx:for="{{stores}}">
+                        <checkbox value="{{item.name}}" checked="{{item.chose==1}}"/>
+                        {{item.name}}
+                    </view>
+                </view>
+            </view>
+            <view>
+                <view class='chose_title'>大类范围:</view>
+                <view class='chose_list'>
+                    <view wx:for="{{stores}}">
+                        <checkbox value="{{item.name}}" checked="{{item.chose==1}}"/>
+                        {{item.name}}
+                    </view>
+                </view>
+            </view>
+            <view>
+                <view class='chose_title'>品牌范围:</view>
+                <view class='chose_list'>
+                    <view wx:for="{{stores}}">
+                        <checkbox value="{{item.name}}" checked="{{item.chose==1}}"/>
+                        {{item.name}}
+                    </view>
+                </view>
+            </view>
+            <view class='screen_btm_btn'>
+                <button class='screen_btn' data-id="0" bindtap='submitScreen'>默认</button>
+                <button class='screen_btn' data-id="1" bindtap='submitScreen'>确定</button>
+            </view>
         </view>
-    </view>
-    <view class="search_form">
-        <picker mode="date" class="picker_line" value="{{searchTime}}" fields="month" start="2018-05" end="2020-09" bindchange="bindDateChange">
-            <view class="picker">
-            {{searchTime}}
+        <view class="data_table">
+            <view class='table_head'>
+                <view class="br">门店</view>
+                <view class="br">销售额</view>
+                <view class="br">销量</view>
+                <view class="br">毛利</view>
+                <view class="br">账后毛利</view>
+                <view>比重</view>
             </view>
-        </picker>
-        <picker bindchange="bindPickerChange" class="picker_line" value="{{pickerIndex}}" range="{{pickerArray}}">
-            <view class="picker">
-            {{pickerArray[pickerIndex]}}
+            <view class='table_body' wx:for="{{tableList}}">
+                <view class="tr">
+                    <view class="br">{{item.name}}</view>
+                    <view class="br">{{item.salesMoney}}</view>
+                    <view class="br">{{item.salesVolume}}</view>
+                    <view class="br">{{item.profit}}</view>
+                    <view class="br">{{item.accountProfit}}</view>
+                    <view>{{item.proportion}}</view>
+                </view>
             </view>
-        </picker>
-        <view bindtap='search' class='search'>筛选</view>
+            <view class='table_bottom'>
+                <view class="br">合计</view>
+                <view class="br">8009283</view>
+                <view class="br">301242</view>
+                <view class="br">34053673</view>
+                <view class="br">2304243</view>
+                <view>100%</view>
+            </view>
+        </view>
     </view>
 </view>

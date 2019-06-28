@@ -1,4 +1,5 @@
 // pages/salesAnalysis/salesAnalysis.js
+const app = getApp()
 Page({
 
     /**
@@ -8,6 +9,11 @@ Page({
         navbarData: { title: '销售分析' },
         searchTime: '2018-05',
         pickerIndex: 1,
+        pickerIndex1: 2,
+        pickerIndex2: 3,
+        height: '60px',
+        isShowSort:false,
+        isShowScreen:false,
         pickerArray:['门店','大类','品牌','供应商','销售员'],
         tableList:[
             {
@@ -154,14 +160,119 @@ Page({
                 accountProfit: '97700',
                 proportion: '9%'
             },
-        ]
+        ],
+        sorts:[{
+            id:'01',
+            name:'销售额',
+            chose: 1,
+            sort: 'up'
+        }, {
+            id: '02',
+            name: '销量',
+            chose: 1,
+            sort: 'up'
+        }, {
+            id: '03',
+            name: '毛利',
+            chose: 1,
+            sort: 'up'
+        }, {
+            id: '04',
+            name: '账后毛利',
+            chose: 1,
+            sort: 'up'
+        }, {
+            id: '05',
+            name: '均价',
+            chose: 0,
+            sort: 'up'
+        }, {
+            id: '06',
+            name: '比重',
+            chose: 1,
+            sort: 'up'
+        }, {
+            id: '07',
+            name: '毛利比重',
+            chose: 0,
+            sort: 'up'
+        }],
+        stores:[{
+            id:'1',
+            chose:1,
+            name:'东风店'
+        }, {
+            id: '2',
+            chose: 1,
+            name: '东风店'
+        }, {
+            id: '3',
+            chose: 0,
+            name: '新华店'
+        }, {
+            id: '4',
+            chose: 1,
+            name: '百大店'
+        }, {
+            id: '5',
+            chose: 0,
+            name: '安丘店'
+        }, {
+            id: '6',
+            chose: 1,
+            name: '临朐店'
+        }],
+        classList:[{
+            id: '1',
+            chose: 1,
+            name: '彩电'
+        }, {
+            id: '2',
+            chose: 1,
+            name: '冰箱'
+        }, {
+            id: '3',
+            chose: 0,
+            name: '洗衣机'
+        }, {
+            id: '4',
+            chose: 1,
+            name: '小家电'
+        }, {
+            id: '5',
+            chose: 0,
+            name: '厨卫'
+        }, {
+            id: '6',
+            chose: 1,
+            name: '空调'
+        }],
+        brandList:[{
+            id: '1',
+            chose: 1,
+            name: '海尔'
+        }, {
+            id: '2',
+            chose: 1,
+            name: '格力'
+        }, {
+            id: '3',
+            chose: 0,
+            name: '美的'
+        }, {
+            id: '4',
+            chose: 1,
+            name: '西门子'
+        }],
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.setData({
+            height: app.globalData.height
+        })
     },
 
     /**
@@ -177,6 +288,22 @@ Page({
     onShow: function () {
 
     },
+    submitScreen: function(e){
+        let sort = e.currentTarget.dataset.id
+        if(e){
+            //根据条件筛选
+        }else{
+            //默认筛选条件
+        }
+        this.setData({
+            isShowScreen: false
+        })
+    },
+    showSort:function(){
+        this.setData({
+            isShowSort: !this.data.isShowSort
+        })
+    },
     bindDateChange: function(e){
         let time = e.detail.value
         this.setData({
@@ -189,8 +316,22 @@ Page({
             pickerIndex: i
         })
     },
-    search: function(){
-
+    bindPickerChange1: function (e) {
+        let i = e.detail.value
+        this.setData({
+            pickerIndex1: i
+        })
+    },
+    bindPickerChange2: function (e) {
+        let i = e.detail.value
+        this.setData({
+            pickerIndex2: i
+        })
+    },
+    showScreen: function(){
+        this.setData({
+            isShowScreen: true
+        })
     },
     /**
      * 生命周期函数--监听页面隐藏

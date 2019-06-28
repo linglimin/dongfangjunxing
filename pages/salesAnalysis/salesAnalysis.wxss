@@ -1,47 +1,151 @@
 .sales_analysis{
-    overflow: scroll;
+    position: relative;
+}
+.page_view{
+    position: relative;
+    height: 100%;
+}
+checkbox {
+  width: 30rpx;
+  height: 30rpx;
+}
+/*checkbox 选项框大小  */
+checkbox .wx-checkbox-input {
+  width: 30rpx;
+  height: 30rpx;
 }
 .search_form{
     position: fixed;
-    bottom: 0;
+    top: 0;
     width: 90%;
     padding: 0 5%;
-    height: 150rpx;
-    border-top: 4rpx solid #eee;
-    margin-top: 20rpx;
+    height: 170rpx;
+    border-bottom: 4rpx solid #eee;
+    margin-top: 0rpx;
     background: #090738;
+    z-index: 100;
+}
+.screen_layer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 420rpx;
+    padding: 40rpx;
+    background: #00336a;
+    z-index: 101;
+    height: 85vh;
+}
+.chose_title{
+    float: left;
+    font-size: 28rpx;
+    width: 140rpx;
+    margin-right: 20rpx;
+}
+.chose_list{
+    float: left;
+    font-size: 24rpx;
+    margin-bottom: 30rpx;
+}
+.chose_list view{
+    margin: 6rpx 0;
+}
+.screen_btm_btn{
+    position: absolute;
+    right: 40rpx;
+    bottom: 40rpx;
+}
+.screen_btn{
+    width: 140rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    float: left;
+    margin: 20rpx;
+    font-size: 24rpx; 
 }
 .picker_line{
-    width: 30%;
-    height: 150rpx;
+    width: 50%;
+    height: 100rpx;
     float: left;
     margin-right:20rpx;
     color: #000;
     background: #090738;
+    text-align: center;
 }
 .picker{
     width: 80%;
     padding: 0 10%;
     height: 60rpx;
-    margin: 40rpx 0;
+    margin: 20rpx 0;
     line-height: 60rpx;
     background: #fff;
 }
 .search{
-    width:140rpx;
+    width:180rpx;
     height: 60rpx;
     float: right;
     line-height: 60rpx;
-    margin-right: 0rpx;
-    margin-top:40rpx;
+    margin-top:20rpx;
     text-align: center;
-    background: #eee;
     border-radius: 10rpx;
+    color: #fff;
+    background: rgba(42, 37, 90, 0.7)
+}
+.sort{
+    position:absolute;
+    bottom:0;
+    width: 90%;
+    height: 50rpx;
+    font-size: 28rpx;
+    text-align: center;
+}
+.picker_line1,.picker_line2{
+    float: left;
+    width: 16.5%;
+}
+.show_sort{
+    float: right;
+    width: 16.5%;
+}
+.sort_layer{
+    position: absolute;
+    top: 170rpx;
+    right: 0;
+    padding: 20rpx;
+    background: #fff;
     color: #222;
+    background: #00336a;
+}
+.sort_line{
+    display: flex;
+    flex-wrap:nowrap;
+    justify-content:space-around;
+    border-bottom:1px solid #eee;
+    background: #bcbcbc;
+}
+.sort_line .td{
+    width:120rpx;
+    height:60rpx;
+    line-height:60rpx;
+    text-align:center;
+    font-size:24rpx;
+    border-right: 1px solid #eee;
+}
+.sort_line .td image{
+    width: 30rpx;
+    height: 40rpx;
+    padding-top: 12rpx;
+}
+.sort_line .td checkbox{
+    width: 20px;
+    height: 20px;
+    background: #bcbcbc;
 }
 .data_table{
+    position: absolute;
+    top: 180rpx;
     width: 92%;
-    margin:30rpx 4% 220rpx 4%;
+    overflow-y: scroll;
+    margin:30rpx 4% 30rpx 4%;
     border-top:1px solid #eee;
     border-left:1px solid #eee;
     border-right: 1px solid #eee;
