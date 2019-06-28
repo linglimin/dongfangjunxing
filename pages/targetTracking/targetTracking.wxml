@@ -15,34 +15,42 @@
             </view>
         </view>
         <view class='tracking_location'></view>
-        <view class='tracking_info clearfix' wx:key="index" wx:for="{{targetList}}">
-            <view class="fl detail">
-                <view class='title single-text'>{{item.title}}:</view>
-                <view class='clearfix'>
-                    <view class='fl handle'>
-                        <text wx:if="{{item.isReceive}}" class="handle_receive {{item.hasReceive ? 'has_receive' : ''}}">接收</text>
-                        <text wx:if="{{!item.isReceive}}" style="margin-right: 10rpx;" class="iconfont icon-edit" bindtap='goTrackingSettings'></text>
-                        <text wx:if="{{!item.isReceive}}" class="iconfont icon-delete"></text>
-                    </view>
-                    <view class='fl value_info'>
-                        <view class="value_wrap"><text class='key'>目标:</text> <text class="value single-text">{{item.target}}</text></view>
-                        <view><text class='key'>完成:</text> <text class="value single-text">{{item.complete}}</text></view>
+        <view class='tracking_detail' wx:key="index" wx:for="{{targetList}}">
+            <view class='tracking_info clearfix'>
+                <view class="fl detail">
+                    <view class='title single-text'>{{item.title}}:</view>
+                    <view class='clearfix'>
+                        <view class='fl handle'>
+                            <text wx:if="{{item.isReceive}}" class="handle_receive {{item.hasReceive ? 'has_receive' : ''}}">接收</text>
+                            <text wx:if="{{!item.isReceive}}" style="margin-right: 10rpx;" class="iconfont icon-edit" bindtap='goTrackingSettings'></text>
+                            <text wx:if="{{!item.isReceive}}" class="iconfont icon-delete"></text>
+                        </view>
+                        <view class='fl value_info'>
+                            <view class="value_wrap"><text class='key'>目标:</text> <text class="value single-text">{{item.target}}</text></view>
+                            <view><text class='key'>完成:</text> <text class="value single-text">{{item.complete}}</text></view>
+                        </view>
                     </view>
                 </view>
-            </view>
-            <view class="fl process clearfix">
-                <segment class="fr" wx:if="{{item.type === 'segment'}}" value="{{item.percent}}"></segment>
-                <circle class="fr" wx:if="{{item.type === 'circle'}}" value="{{item.percent}}"></circle>
-                <view wx:if="{{item.type === 'bar'}}">
-                    <view class="process_percent">{{item.percent}}%</view>
-                    <progress backgroundColor="#507cb6" activeColor="#f7cffc" percent="{{item.percent}}" border-radius="5" stroke-width="8"></progress>
+                <view class="fl process clearfix">
+                    <segment class="fr" wx:if="{{item.type === 'segment'}}" value="{{item.percent}}"></segment>
+                    <circle class="fr" wx:if="{{item.type === 'circle'}}" value="{{item.percent}}"></circle>
+                    <view wx:if="{{item.type === 'bar'}}">
+                        <view class="process_percent">{{item.percent}}%</view>
+                        <progress backgroundColor="#507cb6" activeColor="#f7cffc" percent="{{item.percent}}" border-radius="5" stroke-width="8"></progress>
+                    </view>
+                </view>
+                <view class="fr status">
+                    <view wx:if="{{item.percent > 80}}" class='great status_icon iconfont icon-Stone-thumbs-up'></view>
+                    <view wx:if="{{item.percent > 60 && item.percent <= 80}}" class='great status_icon iconfont icon-smile'></view>
+                    <view wx:if="{{item.percent <= 60}}" class='bad status_icon iconfont icon-exclamation-point'></view>
+                    <view class='status_detail' data-index="{{index}}" bindtap='showDetail'>详情</view>
                 </view>
             </view>
-            <view class="fr status">
-                <view wx:if="{{item.percent > 80}}" class='great status_icon iconfont icon-Stone-thumbs-up'></view>
-                <view wx:if="{{item.percent > 60 && item.percent <= 80}}" class='great status_icon iconfont icon-smile'></view>
-                <view wx:if="{{item.percent <= 60}}" class='bad status_icon iconfont icon-exclamation-point'></view>
-                <view class='status_detail'>详情</view>
+            <view wx:if="{{item.showDetail}}" class='tracking_information'>
+                <view style="margin-bottom: 30rpx;" wx:for="{{item.detail}}" wx:for-item="detail" wx:for-index="i" wx:key="{{i}}">
+                    <view style='margin-bottom: 30rpx'>{{detail.name}}: {{detail.value}}<text class="fr" data-index="{{index}}" data-secondindex="{{i}}" bindtap='showTableData'>{{detail.showTableData ? "收起" : "展开"}}</text></view>
+                    <table wx:if="{{detail.showTableData}}" header="{{header}}" tableData="{{detail.tableData}}"></table>
+                </view>
             </view>
         </view>
     </view>

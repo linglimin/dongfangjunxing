@@ -21,25 +21,35 @@
   right: 0;
   bottom: 0;
   margin: auto;
-  font-size: 36rpx;
+  font-size: 18px;
   color: #2c2b2b;
   font-weight: 600;
 }
-.back_page{
-    position: absolute;
-    left: 30rpx;
-    bottom: 0rpx;
+.nav-back{
+    padding-left: 20px;
+    font-size: 20px; 
 }
-.back_page image{
-    width: 40rpx;
-    height: 36rpx;
+.nav-back text{
+    margin-right: 10px;
 }
-.back_home{
-    position: absolute;
-    left: 90rpx;
-    bottom: 0rpx;
+@font-face {
+  font-family: 'iconfont';  /* project id 1263469 */
+  src: url('//at.alicdn.com/t/font_1263469_ypsf1ghb67r.eot');
+  src: url('//at.alicdn.com/t/font_1263469_ypsf1ghb67r.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1263469_ypsf1ghb67r.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1263469_ypsf1ghb67r.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1263469_ypsf1ghb67r.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1263469_ypsf1ghb67r.svg#iconfont') format('svg');
 }
-.back_home image{
-    width: 40rpx;
-    height: 40rpx;
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-left-arrow:before {
+  content: "\e68c";
+}
+.icon-Stone-home:before {
+  content: "\e6a4";
 }

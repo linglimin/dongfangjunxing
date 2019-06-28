@@ -1,0 +1,22 @@
+/* components/table/table.wxss */
+.table {
+    border: 1px solid #5f3763;
+    border-right: 0; 
+    border-bottom: 0;
+    width: 100%;
+}
+.tr {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.th, .td {
+    padding: 5px;
+    border-bottom: 1px solid #5f3763;
+    border-right: 1px solid #5f3763;
+    text-align: center;
+    width: 100%;
+}
+.th {
+    font-weight: 400;
+}

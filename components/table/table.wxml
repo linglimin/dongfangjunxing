@@ -1,0 +1,11 @@
+<!--components/table/table.wxml-->
+<view class="table">
+    <view class="tr">
+        <view wx:for="{{header}}" class="th" wx:key="{{item.key}}">{{item.value}}</view>
+    </view>
+    <block wx:for="{{tableData}}" wx:key="{{i}}" wx:for-index="i">
+        <view class="tr">
+            <view wx:for="{{header}}" class="td" wx:key="{{i}}_{{j}}" wx:for-index="j" wx:for-item="td">{{item[header[j].key]}}</view>
+        </view>
+    </block>
+</view>
