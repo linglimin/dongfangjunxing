@@ -22,7 +22,7 @@
             </view>
         </picker>
     </view>
-    <view class='bar bb'>
+    <view class='bar bb pd60'>
         <view class="left_text">开始日期:</view>
         <picker mode="date" class="picker_right" value="{{startTime}}" fields="day" start="2018-05-01" end="2099-09-09" bindchange="bindDateChange2">
             <view class="picker">
@@ -30,7 +30,7 @@
             </view>
         </picker>
     </view>
-    <view class='bar mb20'>
+    <view class='bar mb20 pd60'>
         <view class="left_text">结束日期:</view>
         <picker mode="date" class="picker_right" value="{{endTime}}" fields="day" start="2018-05-01" end="2099-09-09" bindchange="bindDateChange3">
             <view class="picker">
@@ -38,11 +38,11 @@
             </view>
         </picker>
     </view>
-    <view class='bar bb'>
+    <view class='bar bb pd60'>
         <view class="left_text">目标名称:</view>
         <input placeholder='请输入名称' class='target_input'></input>
     </view>
-    <view class='bar mb20'>
+    <view class='bar mb20 pd60'>
         <view class="left_text">目标设定:</view>
         <input placeholder='请输入设定目标金额' class='target_input'></input>
     </view>

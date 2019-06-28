@@ -20,6 +20,10 @@
 .bb{
     border-bottom:2rpx solid #ccc;
 }
+.pd60{
+    width: 610rpx;
+    padding: 0 70rpx;
+}
 .left_text{
     font-size: 40rpx;
     line-height: 100rpx;
