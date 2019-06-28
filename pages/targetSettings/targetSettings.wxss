@@ -112,4 +112,5 @@
     height: 80rpx;
     padding: 10rpx 20rpx;
     text-align: right;
+    color: #222;
 }

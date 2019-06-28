@@ -26,7 +26,7 @@ Page({
                 list: [
                     {
                         title: "销售分析",
-                        icon: "icon-bar",
+                        icon: "icon-md-map",
                         url: "/pages/salesAnalysis/salesAnalysis"
                     },
                     {
