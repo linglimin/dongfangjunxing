@@ -6,7 +6,7 @@ Component({
     properties: {
         height: {
             type: Number,
-            value: 180
+            value: 150
         },
         //当前的值 默认45
         value: {

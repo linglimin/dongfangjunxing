@@ -6,7 +6,7 @@ Component({
     properties: {
         diameter: {
             type: Number,
-            value: 180
+            value: 150
         },
         //线条宽度 默认10
         lineWidth: {

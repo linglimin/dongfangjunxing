@@ -47,14 +47,14 @@
     right: calc(100% + 10px);
 }
 .segment text:nth-child(8){
-    padding: 5px 6px;
+    padding: 8rpx 10rpx;
     height: 0;
     background: #fff;
     right: calc(100% - 5px);
 }
 .segment text:nth-child(8)::after{
     content: "";
-    border: 5px solid transparent;
+    border: 8rpx solid transparent;
     border-left-color: #fff; 
     position: absolute;
     top: 0;

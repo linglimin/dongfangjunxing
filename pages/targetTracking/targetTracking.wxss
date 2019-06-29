@@ -57,9 +57,7 @@
 }
 .tracking_info .detail{
     width: 50%;
-}
-.tracking_info .detail .title{
-    margin-bottom: 40rpx; 
+    padding-top: 40rpx; 
 }
 .tracking_info .detail .handle{
     width: 30%;
@@ -96,7 +94,7 @@
     width: 30%;
 }
 .tracking_info .process_percent{
-    padding-top: 80rpx; 
+    padding-top: 40rpx; 
     text-align: right;
     font-size: 52rpx;
 }
@@ -104,7 +102,6 @@
     width: 10%;
 }
 .tracking_info .status_icon{
-    margin-top: 30rpx;
     font-size: 58rpx;
 }
 .tracking_info .status_detail{

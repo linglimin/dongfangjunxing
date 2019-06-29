@@ -17,8 +17,8 @@
         <view class='tracking_location'></view>
         <view class='tracking_detail' wx:key="index" wx:for="{{targetList}}">
             <view class='tracking_info clearfix'>
+                <view class='title single-text'>{{item.title}}:</view>
                 <view class="fl detail">
-                    <view class='title single-text'>{{item.title}}:</view>
                     <view class='clearfix'>
                         <view class='fl handle'>
                             <text wx:if="{{item.isReceive}}" class="handle_receive {{item.hasReceive ? 'has_receive' : ''}}">接收</text>
