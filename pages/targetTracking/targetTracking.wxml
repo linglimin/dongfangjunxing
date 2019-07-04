@@ -5,7 +5,8 @@
         <view class='tracking_header'>
             <view class="header_tab">
                 <text data-id="1" class="{{active === '1' ? 'active' : ''}}"  bindtap="tab">进行中</text>
-                <text data-id="2" class="{{active === '2' ? 'active' : ''}}"  bindtap="tab">历史目标</text>
+                <text data-id="2" class="{{active === '2' ? 'active' : ''}}"  bindtap="tab">历史</text>
+                <text data-id="3" class="{{active === '3' ? 'active' : ''}}"  bindtap="tab">团队</text>
             </view>
              <view class="header_search">
                 <text>筛选</text>
@@ -36,7 +37,7 @@
                     <circle class="fr" wx:if="{{item.type === 'circle'}}" value="{{item.percent}}"></circle>
                     <view wx:if="{{item.type === 'bar'}}">
                         <view class="process_percent">{{item.percent}}%</view>
-                        <progress backgroundColor="#507cb6" activeColor="#f7cffc" percent="{{item.percent}}" border-radius="5" stroke-width="8"></progress>
+                        <progress active="true" backgroundColor="#507cb6" activeColor="#f7cffc" percent="{{item.percent}}" border-radius="5" stroke-width="8"></progress>
                     </view>
                 </view>
                 <view class="fr status">

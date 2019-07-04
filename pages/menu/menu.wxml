@@ -1,6 +1,6 @@
 <!--pages/menu/menu.wxml-->
 <view class="container menu">
-    <head></head>
+    <head navbarData="{{navbarData}}"></head>
     <view class='main'>
         <view class="menu_img">
             <image src="https://run.mockplus.cn/FmlhvzHH8fivSoCn8GhA/app/0EDCD3EB-42DB-412B-9411-E5DD751EB4BA/4EC636D69570505FB1B7746B71FB61B3.jpg"></image>

@@ -7,10 +7,11 @@
 }
 .tracking_header{
     position: fixed;
+    left: 0;
+    width: 100%;
     height: 150rpx;
-    padding-top: 50rpx; 
+    padding: 50rpx 25rpx 0 25rpx; 
     margin-bottom: 40rpx;
-    width: calc(100% - 40rpx);
     box-sizing: border-box;
     z-index: 2;
     background: #090738;
@@ -26,14 +27,17 @@
 }
 .header_tab text{
     color: #c9c9c9;
-    padding: 0 40rpx;
+    padding: 0 30rpx;
 }
 .header_tab text.active{
     font-weight: 600;
     color: #fff
 }
-.header_tab text:nth-child(1){
+.header_tab text{
     border-right: 1px solid #666; 
+}
+.header_tab text:last-child{
+    border-right: 0;
 }
 .header_search{
     padding-left: 60rpx;

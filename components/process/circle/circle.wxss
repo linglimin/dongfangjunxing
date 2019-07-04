@@ -24,7 +24,6 @@
     border-radius: 50%;
     position: absolute;
     top:0;
-    -webkit-transform: rotate(-135deg); /* -135deg - 45deg */
 }
 .rightcircle{
     right:0;

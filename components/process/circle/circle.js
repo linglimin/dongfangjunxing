@@ -64,7 +64,9 @@ Component({
      */
     data: {
         leftDeg: -135,
-        rightDeg: -135
+        rightDeg: -135,
+        rightTime: 0,
+        leftTime: 0
     },
 
     /**
@@ -76,12 +78,20 @@ Component({
     attached: function(){
         var leftDeg = 0;
         var rightDeg = 0;
+        let leftTime = 0;
+        let rightTime = 0;
         var deg = 3.6 * this.data.value - 135;
         rightDeg = deg <= 45 ? deg : 45;
         leftDeg = deg <= 45 ? -135 : -135 + deg - 45;
-        this.setData({
-            leftDeg: leftDeg,
-            rightDeg: rightDeg
-        })
+        rightTime = (rightDeg + 135) * 0.005;
+        leftTime = (leftDeg + 135) * 0.005;
+        setTimeout(() => {
+            this.setData({
+                leftDeg: leftDeg,
+                rightDeg: rightDeg,
+                rightTime: rightTime,
+                leftTime: leftTime
+            })
+        }, 300)
     }
 })

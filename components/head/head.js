@@ -9,7 +9,7 @@ Component({
                 this.setData({
                     showback: newVal.showback === false ? false : true,
                     showhome: newVal.showhome === false ? false : true,
-                    title: newVal.title || '东方君行'
+                    title: newVal.title || '君想软件'
                 })
             }
         }
@@ -18,7 +18,7 @@ Component({
         height: '',
         showback: true,
         showhome: true,
-        title: '东方君行'
+        title: '君想软件'
     },
     attached: function () {
         // 定义导航栏的高度   方便对齐
