@@ -22,6 +22,7 @@ Page({
                 salesVolume: '9212',
                 profit: '81000',
                 accountProfit: '88700',
+                bareProfit: '69700',
                 proportion: '11%'
             },
             {
@@ -30,6 +31,7 @@ Page({
                 salesVolume: '8212',
                 profit: '78000',
                 accountProfit: '88700',
+                bareProfit: '59700',
                 proportion: '9%'
             },
             {
@@ -38,6 +40,7 @@ Page({
                 salesVolume: '4212',
                 profit: '61000',
                 accountProfit: '58700',
+                bareProfit: '44700',
                 proportion: '6%'
             },
             {
@@ -46,6 +49,7 @@ Page({
                 salesVolume: '3212',
                 profit: '31000',
                 accountProfit: '48700',
+                bareProfit: '37800',
                 proportion: '13%'
             },
             {
@@ -54,6 +58,7 @@ Page({
                 salesVolume: '9912',
                 profit: '76000',
                 accountProfit: '78700',
+                bareProfit: '69980',
                 proportion: '8%'
             },
             {
@@ -62,6 +67,7 @@ Page({
                 salesVolume: '9212',
                 profit: '81000',
                 accountProfit: '88700',
+                bareProfit: '78300',
                 proportion: '4%'
             },
             {
@@ -70,6 +76,7 @@ Page({
                 salesVolume: '4212',
                 profit: '61000',
                 accountProfit: '58700',
+                bareProfit: '57600',
                 proportion: '2%'
             },
             {
@@ -78,6 +85,7 @@ Page({
                 salesVolume: '3212',
                 profit: '31000',
                 accountProfit: '48700',
+                bareProfit: '34700',
                 proportion: '3%'
             },
             {
@@ -86,6 +94,7 @@ Page({
                 salesVolume: '9912',
                 profit: '76000',
                 accountProfit: '78700',
+                bareProfit: '61700',
                 proportion: '3%'
             },
             {
@@ -94,6 +103,7 @@ Page({
                 salesVolume: '9212',
                 profit: '81000',
                 accountProfit: '88700',
+                bareProfit: '61200',
                 proportion: '9%'
             },
             {
@@ -102,6 +112,7 @@ Page({
                 salesVolume: '4212',
                 profit: '61000',
                 accountProfit: '58700',
+                bareProfit: '32400',
                 proportion: '8%'
             },
             {
@@ -110,6 +121,7 @@ Page({
                 salesVolume: '3212',
                 profit: '31000',
                 accountProfit: '48700',
+                bareProfit: '35200',
                 proportion: '9%'
             },
             {
@@ -118,6 +130,7 @@ Page({
                 salesVolume: '9912',
                 profit: '76000',
                 accountProfit: '78700',
+                bareProfit: '54700',
                 proportion: '4%'
             },
             {
@@ -126,6 +139,7 @@ Page({
                 salesVolume: '9212',
                 profit: '81900',
                 accountProfit: '82700',
+                bareProfit: '70300',
                 proportion: '3%'
             },
             {
@@ -134,6 +148,7 @@ Page({
                 salesVolume: '9212',
                 profit: '91000',
                 accountProfit: '80700',
+                bareProfit: '65300',
                 proportion: '6%'
             },
             {
@@ -142,6 +157,7 @@ Page({
                 salesVolume: '9212',
                 profit: '81900',
                 accountProfit: '81100',
+                bareProfit: '65300',
                 proportion: '2%'
             },
             {
@@ -150,6 +166,7 @@ Page({
                 salesVolume: '9212',
                 profit: '81900',
                 accountProfit: '89700',
+                bareProfit: '60300',
                 proportion: '3%'
             },
             {
@@ -158,6 +175,7 @@ Page({
                 salesVolume: '9212',
                 profit: '68000',
                 accountProfit: '97700',
+                bareProfit: '86300',
                 proportion: '9%'
             },
         ],
@@ -174,6 +192,11 @@ Page({
         }, {
             id: '03',
             name: '毛利',
+            chose: 1,
+            sort: 'up'
+        }, {
+            id: '03',
+            name: '裸价毛利',
             chose: 1,
             sort: 'up'
         }, {

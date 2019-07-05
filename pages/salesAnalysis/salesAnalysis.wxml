@@ -82,19 +82,21 @@
             <view class='table_head'>
                 <view class="br">门店</view>
                 <view class="br">销售额</view>
-                <view class="br">销量</view>
-                <view class="br">毛利</view>
-                <view class="br">账后毛利</view>
-                <view>比重</view>
+                <view class="br" style='width:13%'>销量</view>
+                <view class="br" style='width:13%'>毛利</view>
+                <view class="br" style='width:18%'>裸价毛利</view>
+                <view class="br" style='width:18%'>账后毛利</view>
+                <view style='width:13%'>比重</view>
             </view>
             <view class='table_body' wx:for="{{tableList}}">
                 <view class="tr">
                     <view class="br">{{item.name}}</view>
                     <view class="br">{{item.salesMoney}}</view>
-                    <view class="br">{{item.salesVolume}}</view>
-                    <view class="br">{{item.profit}}</view>
-                    <view class="br">{{item.accountProfit}}</view>
-                    <view>{{item.proportion}}</view>
+                    <view class="br" style='width:13%'>{{item.salesVolume}}</view>
+                    <view class="br" style='width:13%'>{{item.profit}}</view>
+                    <view class="br" style='width:18%'>{{item.accountProfit}}</view>
+                    <view class="br" style='width:18%'>{{item.bareProfit}}</view>
+                    <view style='width:13%'>{{item.proportion}}</view>
                 </view>
             </view>
             <view class='table_bottom'>
