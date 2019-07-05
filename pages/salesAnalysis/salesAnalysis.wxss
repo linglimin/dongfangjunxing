@@ -171,6 +171,8 @@ checkbox .wx-checkbox-input {
     flex-wrap: nowrap;
     justify-content:space-around;
     border-bottom: 1px solid #eee;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .data_table .table_body .tr view,.data_table .table_bottom view{
     width: 16.5%;
@@ -182,6 +184,7 @@ checkbox .wx-checkbox-input {
 }
 .data_table .table_head .br,.data_table .table_body .br, .data_table .table_bottom .br{
     border-right: 1px solid #ddd;
+    overflow: hidden;
 }
 .table_bottom{
     border-top:1px solid #ddd;
