@@ -56,7 +56,7 @@ Page({
                     {
                         title: "任务清单",
                         icon: "icon-Stone-clipboard",
-                        url: ""
+                        url: "/pages/targetTracking/targetTracking"
                     },
                     {
                         title: "预警中心",

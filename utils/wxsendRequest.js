@@ -8,33 +8,18 @@ export default {
     console.log('[' + rtime + ']服务请求地址：', options.url)
     var cookies = []
     cookies.push('lang=zh')
-    var sso_uid = wx.getStorageSync('sso_uid')
-    var sso_tk = wx.getStorageSync('sso_tk')
-    var sso_phone = wx.getStorageSync('sso_phone')
-    var sso_name = wx.getStorageSync('sso_name')
-    let app_version = wx.getStorageSync('app_version')
-    let openid = wx.getStorageSync('openid')
-    if (openid) cookies.push('openid=' + openid)
-    cookies.push('version=' + app_version)
-    let carPs = ''
-    if (wx.getStorageSync('actChannel')){
-      carPs = 'mp-' + app.globalData.scene + '-' + wx.getStorageSync('actChannel')
-    }else{
-      carPs = ('mp-' + app.globalData.systemInfo.brand || 'wx').substring(0, 20)
+      var id = wx.getStorageSync('id')
+      var token = wx.getStorageSync('thirdCode')
+    var name = wx.getStorageSync('name')
+    let version = wx.getStorageSync('version')
+    // let openid = wx.getStorageSync('openid')
+    // if (openid) cookies.push('openid=' + openid)
+    cookies.push('version=' + version)
+    if (id) {
+      cookies.push('id=' + id)
     }
-    carPs = carPs.substring(0, 50)
-    cookies.push('car-ps=' + carPs)
-    if (sso_uid) {
-      cookies.push('sso_uid=' + sso_uid)
-    }
-    if (sso_tk) {
-      cookies.push('sso_tk=' + sso_tk)
-    }
-    if (sso_phone) {
-      cookies.push('sso_phone=' + sso_phone)
-    }
-    if (sso_name) {
-      cookies.push('sso_name=' + encodeURIComponent(sso_name))
+    if (token) {
+      cookies.push('token=' + token)
     }
     var _options = {
       url: options.url || '',
@@ -97,7 +82,6 @@ export default {
     if (_wx_option.method === "POST") {
       _header['content-type'] = _wx_option['content-type'] || 'application/x-www-form-urlencoded' // 默认值,
     }
-    _header['car-vs'] = wx.getStorageSync('app_version') // 默认值,
     _wx_option.header = _header
     console.log('[' + rtime + ']服务请求入参：', _wx_option.data)
     wx.request(_wx_option);

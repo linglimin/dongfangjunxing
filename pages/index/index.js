@@ -1,4 +1,5 @@
 // pages/menu/menu.js
+import common from '../../services/common'
 Page({
 
     /**
@@ -15,7 +16,22 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        //if (wx.getStorageSync('thirdCode')) return
+        let param = {
+            username: 'admin',
+            password: '111111'
+        }
+        common.login(param, function (res) {
+            if (res.code === 200) {
+                console.log(res)
+                wx.setStorageSync('id', res.data.userInfo.id)
+                wx.setStorageSync('name', res.data.userInfo.name)
+                wx.setStorageSync('account', res.data.userInfo.account)
+                wx.setStorageSync('roleNames', res.data.userInfo.roleNames[0])
+                wx.setStorageSync('thirdCode', res.data.userInfo.thirdCode)
+                wx.setStorageSync('otherId', res.data.userInfo.otherId)
+            }
+        })
     },
 
     /**
