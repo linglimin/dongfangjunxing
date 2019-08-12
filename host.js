@@ -1,22 +1,18 @@
 const server = {
     product: {
-        domain1: 'https://monline.01zhuanche.com',
-        domain2: 'https://booking.01zhuanche.com',
+        domain1: 'https://baidu.com',
         url1: 'http://148.70.94.36:9076'
     },
     dev: {
-        domain1: 'https://dev-monline.01zhuanche.com',
-        domain2: 'https://dev-booking.01zhuanche.com',
+        domain1: 'https://dev-baidu.com',
         url1: 'http://148.70.94.36:9076'
     },
     test: {
-        domain1: 'https://test-monline.01zhuanche.com',
-        domain2: 'https://test-booking.01zhuanche.com',
+        domain1: 'https://test-baidu.com',
         url1: 'http://148.70.94.36:9076'
     },
     pre: {
-        domain1: 'https://pre-monline.01zhuanche.com',
-        domain2: 'https://pre-booking.01zhuanche.com',
+        domain1: 'https://pre-baidu.com',
         url1: 'http://148.70.94.36:9076'
     }
 }
