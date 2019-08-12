@@ -18,6 +18,58 @@ class tracking {
             }
         })
     }
+  listDetail(params, callback) {
+    ajax({
+      url: sendLink('url1') + '/goalInfoApi/showGoalItems',
+      type: 'POST',
+      data: params,
+      success: function (ret) {
+        typeof callback == 'function' && callback.call(this, ret)
+      },
+      error: function (ret) {
+        typeof callback == 'function' && callback.call(this, ret)
+      }
+    })
+  }
+  listDetailInfo(params, callback) {
+    ajax({
+      url: sendLink('url1') + '/goalInfoApi/showGoalItemGroup',
+      type: 'POST',
+      data: params,
+      success: function (ret) {
+        typeof callback == 'function' && callback.call(this, ret)
+      },
+      error: function (ret) {
+        typeof callback == 'function' && callback.call(this, ret)
+      }
+    })
+  }
+  templateList(params, callback) {
+    ajax({
+      url: sendLink('url1') + '/goalPlanApi/findPlanlist',
+      type: 'POST',
+      data: params,
+      success: function (ret) {
+        typeof callback == 'function' && callback.call(this, ret)
+      },
+      error: function (ret) {
+        typeof callback == 'function' && callback.call(this, ret)
+      }
+    })
+  }
+  targetSet(params, callback) {
+    ajax({
+      url: sendLink('url1') + '/goalInfoApi/addPersonGoalInfo',
+      type: 'POST',
+      data: params,
+      success: function (ret) {
+        typeof callback == 'function' && callback.call(this, ret)
+      },
+      error: function (ret) {
+        typeof callback == 'function' && callback.call(this, ret)
+      }
+    })
+  }
 }
 
 export default new tracking

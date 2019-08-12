@@ -18,7 +18,7 @@
         <view class='tracking_location'></view>
         <view class='tracking_detail' wx:key="index" wx:for="{{targetList}}">
             <view class='tracking_info clearfix'>
-                <view class='title single-text'>{{item.title}}:</view>
+                <view class='title single-text'>{{item.planName}}:</view>
                 <view class="fl detail">
                     <view class='clearfix'>
                         <view class='fl handle'>
@@ -27,15 +27,15 @@
                             <text wx:if="{{!item.isReceive}}" class="iconfont icon-delete"></text>
                         </view>
                         <view class='fl value_info'>
-                            <view class="value_wrap"><text class='key'>目标:</text> <text class="value single-text">{{item.target}}</text></view>
-                            <view><text class='key'>完成:</text> <text class="value single-text">{{item.complete}}</text></view>
+                            <view class="value_wrap"><text class='key'>目标:</text> <text class="value single-text">{{item.goalNum}}</text></view>
+                            <view><text class='key'>完成:</text> <text class="value single-text">{{item.finishNum}}</text></view>
                         </view>
                     </view>
                 </view>
                 <view class="fl process clearfix">
-                    <segment class="fr" wx:if="{{item.type === 'segment'}}" value="{{item.percent}}"></segment>
-                    <circle class="fr" wx:if="{{item.type === 'circle'}}" value="{{item.percent}}"></circle>
-                    <view wx:if="{{item.type === 'bar'}}">
+                    <segment class="fr" wx:if="{{item.showType === '3'}}" value="{{item.percent}}"></segment>
+                    <circle class="fr" wx:if="{{item.showType === '1'}}" value="{{item.percent}}"></circle>
+                    <view wx:if="{{item.showType === '2'}}">
                         <view class="process_percent">{{item.percent}}%</view>
                         <progress active="true" backgroundColor="#507cb6" activeColor="#f7cffc" percent="{{item.percent}}" border-radius="5" stroke-width="8"></progress>
                     </view>
@@ -49,7 +49,7 @@
             </view>
             <view wx:if="{{item.showDetail}}" class='tracking_information'>
                 <view style="margin-bottom: 30rpx;" wx:for="{{item.detail}}" wx:for-item="detail" wx:for-index="i" wx:key="{{i}}">
-                    <view style='margin-bottom: 30rpx'>{{detail.name}}: {{detail.value}}<text class="fr" data-index="{{index}}" data-secondindex="{{i}}" bindtap='showTableData'>{{detail.showTableData ? "收起" : "展开"}}</text></view>
+                    <view style='margin-bottom: 30rpx'>{{detail.title}}: {{detail.itemValue}}<text class="fr" data-index="{{index}}" data-secondindex="{{i}}" bindtap='showTableData'>{{detail.showTableData ? "收起" : "展开"}}</text></view>
                     <table wx:if="{{detail.showTableData}}" header="{{header}}" tableData="{{detail.tableData}}"></table>
                 </view>
             </view>

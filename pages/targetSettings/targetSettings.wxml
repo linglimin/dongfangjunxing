@@ -3,20 +3,20 @@
     <head navbarData="{{navbarData}}"></head>
     <view class="bar mt20">
         <view class="left_text">目标模版:</view>
-        <picker bindchange="bindPickerChange1" class="picker_line" value="{{pickerIndex1}}" range="{{pickerArray1}}">
+        <picker range-key="goalName" bindchange="bindPickerChange1" class="picker_line" value="{{pickerIndex1}}" range="{{pickerArray1}}">
             <view class="picker">
-            {{pickerArray1[pickerIndex1]}}
+            {{pickerArray1[pickerIndex1].goalName}}
             </view>
         </picker>
     </view>
     <view class='text'>公司级目标，销售额，不含优惠，新店，空调</view>
     <view class="bar mb6">
-        <picker bindchange="bindPickerChange2" class="picker_left" value="{{pickerIndex2}}" range="{{pickerArray2}}">
+        <picker range-key="dateName" bindchange="bindPickerChange2" class="picker_left" value="{{pickerIndex2}}" range="{{pickerArray2}}">
             <view class="picker">
-            {{pickerArray2[pickerIndex2]}}
+            {{pickerArray2[pickerIndex2].dateName}}
             </view>
         </picker>
-        <picker mode="date" class="picker_right" value="{{searchTime}}" fields="month" start="2018-05" end="2020-09" bindchange="bindDateChange1">
+        <picker mode="{{pickerArray2[pickerIndex2].mode}}" class="picker_right" value="{{searchTime}}" fields="{{pickerArray2[pickerIndex2].fields}}" start="2018-05" end="2020-09" bindchange="bindDateChange1">
             <view class="picker">
             {{searchTime}}
             </view>
@@ -40,15 +40,15 @@
     </view>
     <view class='bar bb pd60'>
         <view class="left_text">目标名称:</view>
-        <input placeholder='请输入名称' class='target_input'></input>
+        <input bindinput="bindinputName" placeholder='请输入名称' value="{{goalName}}" class='target_input'></input>
     </view>
     <view class='bar mb20 pd60'>
         <view class="left_text">目标设定:</view>
-        <input placeholder='请输入设定目标金额' class='target_input'></input>
+        <input type="number" bindinput="bindinputNum" placeholder='请输入设定目标金额' value="{{goalNum}}" class='target_input'></input>
     </view>
     <view class='remarks mb20'>
         <view class='remarks_title'>备注：</view>
-        <textarea placeholder='可输入此目标的备注说明'></textarea>
+        <textarea bindinput="bindinputRemark" placeholder='可输入此目标的备注说明' value="{{remark}}"></textarea>
     </view>
     <view class='add_pic'>
         <view class='add_pic_title'>图片：</view>
@@ -58,7 +58,7 @@
         <image wx:if="{{tempFilePaths}}" src='{{tempFilePaths}}'></image>
     </view>
     <view class='bar'>
-        <view class='submit_btn'>提交</view>
+        <view bindtap="submit" class='submit_btn'>提交</view>
     </view>
 </view>
 
