@@ -16,22 +16,23 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        this.getAuth()
         //if (wx.getStorageSync('thirdCode')) return
-        let param = {
-            username: 'admin',
-            password: '111111'
-        }
-        common.login(param, (res) => {
-            if (res.code === 200) {
-                this.getAuth()
-                wx.setStorageSync('id', res.data.userInfo.id)
-                wx.setStorageSync('name', res.data.userInfo.name)
-                wx.setStorageSync('account', res.data.userInfo.account)
-                wx.setStorageSync('roleNames', res.data.userInfo.roleNames[0])
-                wx.setStorageSync('thirdCode', res.data.userInfo.thirdCode)
-                wx.setStorageSync('otherId', res.data.userInfo.otherId)
-            }
-        })
+        // let param = {
+        //     username: 'admin',
+        //     password: '111111'
+        // }
+        // common.login(param, (res) => {
+        //     if (res.code === 200) {
+        //         this.getAuth()
+        //         wx.setStorageSync('id', res.data.userInfo.id)
+        //         wx.setStorageSync('name', res.data.userInfo.name)
+        //         wx.setStorageSync('account', res.data.userInfo.account)
+        //         wx.setStorageSync('roleNames', res.data.userInfo.roleNames[0])
+        //         wx.setStorageSync('thirdCode', res.data.userInfo.thirdCode)
+        //         wx.setStorageSync('otherId', res.data.userInfo.otherId)
+        //     }
+        // })
     },
 
     /**
@@ -53,7 +54,16 @@ Page({
             password: '111111'
         }
         common.auth(param, (res) => {
-            wx.setStorageSync('token', 'Bearer ' + res.token)
+            if (res.userInfo) {
+                wx.setStorageSync('token', 'Bearer ' + res.token)
+                wx.setStorageSync('id', res.userInfo.userId)
+                wx.setStorageSync('name', res.userInfo.name)
+                wx.setStorageSync('account', res.userInfo.account)
+                wx.setStorageSync('roleId', res.userInfo.roleId)
+                wx.setStorageSync('thirdCode', res.userInfo.thirdCode)
+                wx.setStorageSync('otherId', res.userInfo.otherId)
+            }
+            
         })
     },
     goMenuPage: function(){
