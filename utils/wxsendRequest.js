@@ -7,26 +7,20 @@ export default {
     var rtime = randomSum(0, 100000)
     console.log('[' + rtime + ']服务请求地址：', options.url)
     var cookies = []
-    cookies.push('lang=zh')
+    //cookies.push('lang=zh')
       var id = wx.getStorageSync('id')
-      var token = wx.getStorageSync('thirdCode')
+      var token = wx.getStorageSync('token')
     var name = wx.getStorageSync('name')
     let version = wx.getStorageSync('version')
-    // let openid = wx.getStorageSync('openid')
-    // if (openid) cookies.push('openid=' + openid)
-    cookies.push('version=' + version)
-    if (id) {
-      cookies.push('id=' + id)
-    }
-    if (token) {
-      cookies.push('token=' + token)
-    }
     var _options = {
       url: options.url || '',
       method: options.type || 'GET',
       dataType: options.dataType || 'json',
       data: options.data || {},
       'content-type': options['content-type']
+    }
+    if (id) {
+        _options.data.userId = id
     }
     if (typeof options.error === 'function') {
       _options.fail = options.error
@@ -81,6 +75,9 @@ export default {
     //post方式只有配置application/x-www-form-urlencoded，上传参数的类型才是form Data
     if (_wx_option.method === "POST") {
       _header['content-type'] = _wx_option['content-type'] || 'application/x-www-form-urlencoded' // 默认值,
+    }
+    if (token) {
+        _header['Authorization'] = token
     }
     _wx_option.header = _header
     console.log('[' + rtime + ']服务请求入参：', _wx_option.data)

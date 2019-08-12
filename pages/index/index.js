@@ -21,9 +21,9 @@ Page({
             username: 'admin',
             password: '111111'
         }
-        common.login(param, function (res) {
+        common.login(param, (res) => {
             if (res.code === 200) {
-                console.log(res)
+                this.getAuth()
                 wx.setStorageSync('id', res.data.userInfo.id)
                 wx.setStorageSync('name', res.data.userInfo.name)
                 wx.setStorageSync('account', res.data.userInfo.account)
@@ -46,6 +46,15 @@ Page({
      */
     onShow: function () {
 
+    },
+    getAuth: function(){
+        let param = {
+            username: 'admin',
+            password: '111111'
+        }
+        common.auth(param, (res) => {
+            wx.setStorageSync('token', 'Bearer ' + res.token)
+        })
     },
     goMenuPage: function(){
         wx.navigateTo({

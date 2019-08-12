@@ -18,6 +18,19 @@ class common {
             }
         })
     }
+    auth(params, callback) {
+        ajax({
+            url: sendLink('url1') + '/gunsApi/auth',
+            type: 'POST',
+            data: params,
+            success: function (ret) {
+                typeof callback == 'function' && callback.call(this, ret)
+            },
+            error: function (ret) {
+                typeof callback == 'function' && callback.call(this, ret)
+            }
+        })
+    }
 }
 
 export default new common
