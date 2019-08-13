@@ -201,7 +201,9 @@ Page({
     }
     tracking.targetSet(param, (res) => {
       if (res.code === 200) {
-        
+        wx.navigateTo({
+          url: '/pages/targetTracking/targetTracking',
+        })
       }
     })
   }
