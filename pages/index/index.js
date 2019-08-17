@@ -54,14 +54,14 @@ Page({
             password: '111111'
         }
         common.auth(param, (res) => {
-            if (res.userInfo) {
-                wx.setStorageSync('token', 'Bearer ' + res.token)
-                wx.setStorageSync('id', res.userInfo.userId)
-                wx.setStorageSync('name', res.userInfo.name)
-                wx.setStorageSync('account', res.userInfo.account)
-                wx.setStorageSync('roleId', res.userInfo.roleId)
-                wx.setStorageSync('thirdCode', res.userInfo.thirdCode)
-                wx.setStorageSync('otherId', res.userInfo.otherId)
+            if (res.data.userInfo) {
+                wx.setStorageSync('token', 'Bearer ' + res.data.token)
+                wx.setStorageSync('id', res.data.userInfo.userId)
+                wx.setStorageSync('name', res.data.userInfo.name)
+                wx.setStorageSync('account', res.data.userInfo.account)
+                wx.setStorageSync('roleId', res.data.userInfo.roleId)
+                wx.setStorageSync('thirdCode', res.data.userInfo.thirdCode)
+                wx.setStorageSync('otherId', res.data.userInfo.otherId)
             }
             
         })
