@@ -16,9 +16,9 @@
             {{pickerArray2[pickerIndex2].dateName}}
             </view>
         </picker>
-        <picker mode="{{pickerArray2[pickerIndex2].mode}}" class="picker_right" value="{{searchTime}}" fields="{{pickerArray2[pickerIndex2].fields}}" start="2018-05" end="2020-09" bindchange="bindDateChange1">
+        <picker mode="{{pickerArray2[pickerIndex2].mode}}" class="picker_right" value="{{searchTime}}" fields="{{pickerArray2[pickerIndex2].fields}}" start="2018-05" end="2020-09" bindchange="bindDateChange1" range-key="name" range="{{pickerArray2[pickerIndex2].range}}">
             <view class="picker">
-            {{searchTime}}
+            {{searchTimeFormat}}
             </view>
         </picker>
     </view>

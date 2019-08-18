@@ -8,37 +8,43 @@ Page({
         navbarData: { title: '目标设定' },
         pickerArray1: [],
         pickerIndex1: 0,
-        searchTime: '2018',
+        searchTime: '2019',
+        searchTimeFormat: '2019',
         pickerArray2: [{
             dateType: '1',
             dateName: '年',
             mode: 'date',
             fields: 'year',
-            searchTime: '2019'
+            defaultValue: '2019'
           },
           {
             dateType: '2',
             dateName: '季',
-            mode: 'date',
-            fields: 'month'
+            mode: 'multiSelector',
+            fields: 'month',
+            range: [[{ name: "2018年", key: "2018" }, { name: "2019年", key: "2019" }], [{ name: "一季度", key: "1" }, { name: "二季度", key: "2" }, { name: "三季度", key: "3" }, { name: "四季度", key: "4" }]],
+            defaultValue: [1, 0]
           },
           {
             dateType: '3',
             dateName: '月',
             mode: 'date',
-            fields: 'month'
+            fields: 'month',
+            defaultValue: '2019-01'
           },
           {
             dateType: '4',
             dateName: '周',
             mode: 'date',
-            fields: 'year'
+            fields: 'year',
+            defaultValue: '2019-01'
           },
           {
             dateType: '5',
             dateName: '日',
             mode: 'date',
-            fields: 'day'
+            fields: 'day',
+            defaultValue: '2019-01-01'
           },
           {
             dateType: '6',
@@ -131,14 +137,22 @@ Page({
   },
   bindPickerChange2(e) {
     let value = e.detail.value
+    let mode = this.data.pickerArray2[value].mode
+    let range = this.data.pickerArray2[value].range
+    let defaultValue = this.data.pickerArray2[value].defaultValue
     this.setData({
-      pickerIndex2: value
+      pickerIndex2: value,
+      searchTime: defaultValue,
+      searchTimeFormat: mode === 'multiSelector' ? range[0][defaultValue[0]].key + '-' + range[1][defaultValue[1]].key : defaultValue
     })
   },
   bindDateChange1(e) {
     let value = e.detail.value
+    let mode = this.data.pickerArray2[this.data.pickerIndex2].mode
+    let range = this.data.pickerArray2[this.data.pickerIndex2].range
     this.setData({
-      searchTime: value
+        searchTime: value,
+        searchTimeFormat: mode === 'multiSelector' ? range[0][value[0]].key + '-' + range[1][value[1]].key : value
     })
   },
   bindDateChange2(e) {
